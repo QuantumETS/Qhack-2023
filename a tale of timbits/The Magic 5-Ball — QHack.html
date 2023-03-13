@@ -1,0 +1,2200 @@
+<!DOCTYPE html>
+<!-- saved from url=(0073)https://qhack.ai/dashboard/challenge/e5eeca9b-81a4-4520-ae98-baf94b167bff -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>.ͼ1.cm-editor.cm-focused {outline: 1px dotted #212121;}
+.ͼ1.cm-editor {position: relative !important; box-sizing: border-box; display: flex !important; flex-direction: column;}
+.ͼ1 .cm-scroller {display: flex !important; align-items: flex-start !important; font-family: monospace; line-height: 1.4; height: 100%; overflow-x: auto; position: relative; z-index: 0;}
+.ͼ1 .cm-content[contenteditable=true] {-webkit-user-modify: read-write-plaintext-only;}
+.ͼ1 .cm-content {margin: 0; flex-grow: 2; flex-shrink: 0; min-height: 100%; display: block; white-space: pre; word-wrap: normal; box-sizing: border-box; padding: 4px 0; outline: none;}
+.ͼ1 .cm-lineWrapping {white-space: pre-wrap; white-space: break-spaces; word-break: break-word; overflow-wrap: anywhere; flex-shrink: 1;}
+.ͼ2 .cm-content {caret-color: black;}
+.ͼ3 .cm-content {caret-color: white;}
+.ͼ1 .cm-line {display: block; padding: 0 2px 0 6px;}
+.ͼ1 .cm-layer > * {position: absolute;}
+.ͼ1 .cm-layer {contain: size style;}
+.ͼ2 .cm-selectionBackground {background: #d9d9d9;}
+.ͼ3 .cm-selectionBackground {background: #222;}
+.ͼ2.cm-focused .cm-selectionBackground {background: #d7d4f0;}
+.ͼ3.cm-focused .cm-selectionBackground {background: #233;}
+.ͼ1 .cm-cursorLayer {pointer-events: none;}
+.ͼ1.cm-focused .cm-cursorLayer {animation: steps(1) cm-blink 1.2s infinite;}
+@keyframes cm-blink {50% {opacity: 0;}}
+@keyframes cm-blink2 {50% {opacity: 0;}}
+.ͼ1 .cm-cursor, .ͼ1 .cm-dropCursor {border-left: 1.2px solid black; margin-left: -0.6px; pointer-events: none;}
+.ͼ1 .cm-cursor {display: none;}
+.ͼ3 .cm-cursor {border-left-color: #444;}
+.ͼ1.cm-focused .cm-cursor {display: block;}
+.ͼ2 .cm-activeLine {background-color: #cceeff44;}
+.ͼ3 .cm-activeLine {background-color: #99eeff33;}
+.ͼ2 .cm-specialChar {color: red;}
+.ͼ3 .cm-specialChar {color: #f78;}
+.ͼ1 .cm-gutters {flex-shrink: 0; display: flex; height: 100%; box-sizing: border-box; left: 0; z-index: 200;}
+.ͼ2 .cm-gutters {background-color: #f5f5f5; color: #6c6c6c; border-right: 1px solid #ddd;}
+.ͼ3 .cm-gutters {background-color: #333338; color: #ccc;}
+.ͼ1 .cm-gutter {display: flex !important; flex-direction: column; flex-shrink: 0; box-sizing: border-box; min-height: 100%; overflow: hidden;}
+.ͼ1 .cm-gutterElement {box-sizing: border-box;}
+.ͼ1 .cm-lineNumbers .cm-gutterElement {padding: 0 3px 0 5px; min-width: 20px; text-align: right; white-space: nowrap;}
+.ͼ2 .cm-activeLineGutter {background-color: #e2f2ff;}
+.ͼ3 .cm-activeLineGutter {background-color: #222227;}
+.ͼ1 .cm-panels {box-sizing: border-box; position: sticky; left: 0; right: 0;}
+.ͼ2 .cm-panels {background-color: #f5f5f5; color: black;}
+.ͼ2 .cm-panels-top {border-bottom: 1px solid #ddd;}
+.ͼ2 .cm-panels-bottom {border-top: 1px solid #ddd;}
+.ͼ3 .cm-panels {background-color: #333338; color: white;}
+.ͼ1 .cm-tab {display: inline-block; overflow: hidden; vertical-align: bottom;}
+.ͼ1 .cm-widgetBuffer {vertical-align: text-top; height: 1em; width: 0; display: inline;}
+.ͼ1 .cm-placeholder {color: #888; display: inline-block; vertical-align: top;}
+.ͼ1 .cm-button {vertical-align: middle; color: inherit; font-size: 70%; padding: .2em 1em; border-radius: 1px;}
+.ͼ2 .cm-button:active {background-image: linear-gradient(#b4b4b4, #d0d3d6);}
+.ͼ2 .cm-button {background-image: linear-gradient(#eff1f5, #d9d9df); border: 1px solid #888;}
+.ͼ3 .cm-button:active {background-image: linear-gradient(#111, #333);}
+.ͼ3 .cm-button {background-image: linear-gradient(#393939, #111); border: 1px solid #888;}
+.ͼ1 .cm-textfield {vertical-align: middle; color: inherit; font-size: 70%; border: 1px solid silver; padding: .2em .5em;}
+.ͼ2 .cm-textfield {background-color: white;}
+.ͼ3 .cm-textfield {border: 1px solid #555; background-color: inherit;}
+.ͼ1 .cm-tooltip.cm-tooltip-autocomplete > ul > li {overflow-x: hidden; text-overflow: ellipsis; cursor: pointer; padding: 1px 3px; line-height: 1.2;}
+.ͼ1 .cm-tooltip.cm-tooltip-autocomplete > ul {font-family: monospace; white-space: nowrap; overflow: hidden auto; max-width: 700px; max-width: min(700px, 95vw); min-width: 250px; max-height: 10em; height: 100%; list-style: none; margin: 0; padding: 0;}
+.ͼ2 .cm-tooltip-autocomplete ul li[aria-selected] {background: #17c; color: white;}
+.ͼ2 .cm-tooltip-autocomplete-disabled ul li[aria-selected] {background: #777;}
+.ͼ3 .cm-tooltip-autocomplete ul li[aria-selected] {background: #347; color: white;}
+.ͼ3 .cm-tooltip-autocomplete-disabled ul li[aria-selected] {background: #444;}
+.ͼ1 .cm-completionListIncompleteTop:before, .ͼ1 .cm-completionListIncompleteBottom:after {content: "···"; opacity: 0.5; display: block; text-align: center;}
+.ͼ1 .cm-tooltip.cm-completionInfo {position: absolute; padding: 3px 9px; width: max-content; max-width: 400px; box-sizing: border-box;}
+.ͼ1 .cm-completionInfo.cm-completionInfo-left {right: 100%;}
+.ͼ1 .cm-completionInfo.cm-completionInfo-right {left: 100%;}
+.ͼ1 .cm-completionInfo.cm-completionInfo-left-narrow {right: 30px;}
+.ͼ1 .cm-completionInfo.cm-completionInfo-right-narrow {left: 30px;}
+.ͼ2 .cm-snippetField {background-color: #00000022;}
+.ͼ3 .cm-snippetField {background-color: #ffffff22;}
+.ͼ1 .cm-snippetFieldPosition {vertical-align: text-top; width: 0; height: 1.15em; display: inline-block; margin: 0 -0.7px -.7em; border-left: 1.4px dotted #888;}
+.ͼ1 .cm-completionMatchedText {text-decoration: underline;}
+.ͼ1 .cm-completionDetail {margin-left: 0.5em; font-style: italic;}
+.ͼ1 .cm-completionIcon {font-size: 90%; width: .8em; display: inline-block; text-align: center; padding-right: .6em; opacity: 0.6; box-sizing: content-box;}
+.ͼ1 .cm-completionIcon-function:after, .ͼ1 .cm-completionIcon-method:after {content: 'ƒ';}
+.ͼ1 .cm-completionIcon-class:after {content: '○';}
+.ͼ1 .cm-completionIcon-interface:after {content: '◌';}
+.ͼ1 .cm-completionIcon-variable:after {content: '𝑥';}
+.ͼ1 .cm-completionIcon-constant:after {content: '𝐶';}
+.ͼ1 .cm-completionIcon-type:after {content: '𝑡';}
+.ͼ1 .cm-completionIcon-enum:after {content: '∪';}
+.ͼ1 .cm-completionIcon-property:after {content: '□';}
+.ͼ1 .cm-completionIcon-keyword:after {content: '🔑︎';}
+.ͼ1 .cm-completionIcon-namespace:after {content: '▢';}
+.ͼ1 .cm-completionIcon-text:after {content: 'abc'; font-size: 50%; vertical-align: middle;}
+.ͼ1 .cm-tooltip {z-index: 100; box-sizing: border-box;}
+.ͼ2 .cm-tooltip {border: 1px solid #bbb; background-color: #f5f5f5;}
+.ͼ2 .cm-tooltip-section:not(:first-child) {border-top: 1px solid #bbb;}
+.ͼ3 .cm-tooltip {background-color: #333338; color: white;}
+.ͼ1 .cm-tooltip-arrow:before, .ͼ1 .cm-tooltip-arrow:after {content: ''; position: absolute; width: 0; height: 0; border-left: 7px solid transparent; border-right: 7px solid transparent;}
+.ͼ1 .cm-tooltip-above .cm-tooltip-arrow:before {border-top: 7px solid #bbb;}
+.ͼ1 .cm-tooltip-above .cm-tooltip-arrow:after {border-top: 7px solid #f5f5f5; bottom: 1px;}
+.ͼ1 .cm-tooltip-above .cm-tooltip-arrow {bottom: -7px;}
+.ͼ1 .cm-tooltip-below .cm-tooltip-arrow:before {border-bottom: 7px solid #bbb;}
+.ͼ1 .cm-tooltip-below .cm-tooltip-arrow:after {border-bottom: 7px solid #f5f5f5; top: 1px;}
+.ͼ1 .cm-tooltip-below .cm-tooltip-arrow {top: -7px;}
+.ͼ1 .cm-tooltip-arrow {height: 7px; width: 14px; position: absolute; z-index: -1; overflow: hidden;}
+.ͼ3 .cm-tooltip .cm-tooltip-arrow:before {border-top-color: #333338; border-bottom-color: #333338;}
+.ͼ3 .cm-tooltip .cm-tooltip-arrow:after {border-top-color: transparent; border-bottom-color: transparent;}
+.ͼ1.cm-focused .cm-matchingBracket {background-color: #328c8252;}
+.ͼ1.cm-focused .cm-nonmatchingBracket {background-color: #bb555544;}
+.ͼ1 .cm-foldPlaceholder {background-color: #eee; border: 1px solid #ddd; color: #888; border-radius: .2em; margin: 0 1px; padding: 0 1px; cursor: pointer;}
+.ͼ1 .cm-foldGutter span {padding: 0 1px; cursor: pointer;}
+.ͼ3z {background-color: #fff;}
+.ͼ40 {height: ; min-height: 50px; max-height: ; width: ; min-width: ; max-width: ;}
+.ͼ25 {color: #9d0006;}
+.ͼ26 {color: #427b58;}
+.ͼ27 {color: #076678;}
+.ͼ28 {color: #79740e; font-style: bold;}
+.ͼ29 {color: #3c3836;}
+.ͼ2a {color: #8f3f71;}
+.ͼ2b {color: #3c3836;}
+.ͼ2c {color: #3c3836;}
+.ͼ2d {color: #9d0006;}
+.ͼ2e {color: #8f3f71;}
+.ͼ2f {color: #b57614;}
+.ͼ2g {color: #9d0006;}
+.ͼ2h {color: #427b58; font-style: bold;}
+.ͼ2i {color: #af3a03;}
+.ͼ2j {color: #076678;}
+.ͼ2k {color: #427b58;}
+.ͼ2l {color: #427b58;}
+.ͼ2m {color: #928374;}
+.ͼ2n {color: #3c3836;}
+.ͼ2o {color: #7c6f64; text-decoration: underline; text-underline-position: under;}
+.ͼ2p {color: #8f3f71;}
+.ͼ2q {color: #b57614;}
+.ͼ2r {color: #928374; font-style: italic;}
+.ͼ2s {font-weight: bold; color: #af3a03;}
+.ͼ2t {font-style: italic; color: #79740e;}
+.ͼ2u {text-decoration: line-through;}
+.ͼ2v {font-weight: bold; color: #79740e;}
+.ͼ2w {font-weight: bold; color: #79740e;}
+.ͼ2x {font-weight: bold; color: #b57614;}
+.ͼ2y {color: #b57614;}
+.ͼ2z {color: #8f3f71;}
+.ͼ30 {color: #076678;}
+.ͼ31 {color: #9d0006;}
+.ͼ32 {color: #af3a03; border-bottom: 1px dotted #9d0006;}
+.ͼ24 {background-color: #fbf1c7; color: #3c3836;}
+.ͼ24 .cm-gutters {background-color: #ebdbb2; color: #665c54; border-right-color: transparent;}
+.ͼ24 .cm-content {caret-color: #af3a03;}
+.ͼ24 .cm-cursor, .ͼ24 .cm-dropCursor {border-left-color: #af3a03;}
+.ͼ24 .cm-activeLine {background-color: #ebdbb2;}
+.ͼ24 .cm-activeLineGutter {background-color: #ebdbb2;}
+.ͼ24.cm-focused .cm-selectionBackground, .ͼ24 .cm-selectionLayer .cm-selectionBackground, .ͼ24 .cm-content ::selection {background-color: #ebdbb2;}
+.ͼ24 .cm-selectionMatch {background-color: #bdae93;}
+.ͼ48 {height: ; min-height: 50px; max-height: ; width: ; min-width: ; max-width: ;}
+.ͼ46 {height: ; min-height: 50px; max-height: ; width: ; min-width: ; max-width: ;}
+.ͼ44 {height: ; min-height: 50px; max-height: ; width: ; min-width: ; max-width: ;}
+.ͼ42 {height: ; min-height: 50px; max-height: ; width: ; min-width: ; max-width: ;}
+.ͼ3y {height: ; min-height: 50px; max-height: ; width: ; min-width: ; max-width: ;}
+.ͼ3w {height: ; min-height: 50px; max-height: ; width: ; min-width: ; max-width: ;}
+.ͼ5 {color: #7a757a;}
+.ͼ6 {text-decoration: underline;}
+.ͼ7 {text-decoration: underline; font-weight: bold;}
+.ͼ8 {font-style: italic;}
+.ͼ9 {font-weight: bold;}
+.ͼa {text-decoration: line-through;}
+.ͼb {color: #708;}
+.ͼc {color: #219;}
+.ͼd {color: #164;}
+.ͼe {color: #a11;}
+.ͼf {color: #e40;}
+.ͼg {color: #00f;}
+.ͼh {color: #30a;}
+.ͼi {color: #085;}
+.ͼj {color: #167;}
+.ͼk {color: #256;}
+.ͼl {color: #00c;}
+.ͼm {color: #940;}
+.ͼn {color: #f00;}
+</style><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#000000"><meta name="description" content="QHack — Quantum Computing Hackathon and Coding Challenges. The one-of-a-kind celebration of quantum computing. February 13th–28th."><style type="text/css">:root, :host {
+  --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Solid";
+  --fa-font-regular: normal 400 1em/1 "Font Awesome 6 Regular";
+  --fa-font-light: normal 300 1em/1 "Font Awesome 6 Light";
+  --fa-font-thin: normal 100 1em/1 "Font Awesome 6 Thin";
+  --fa-font-duotone: normal 900 1em/1 "Font Awesome 6 Duotone";
+  --fa-font-sharp-solid: normal 900 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-sharp-regular: normal 400 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-brands: normal 400 1em/1 "Font Awesome 6 Brands";
+}
+
+svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
+  overflow: visible;
+  box-sizing: content-box;
+}
+
+.svg-inline--fa {
+  display: var(--fa-display, inline-block);
+  height: 1em;
+  overflow: visible;
+  vertical-align: -0.125em;
+}
+.svg-inline--fa.fa-2xs {
+  vertical-align: 0.1em;
+}
+.svg-inline--fa.fa-xs {
+  vertical-align: 0em;
+}
+.svg-inline--fa.fa-sm {
+  vertical-align: -0.0714285705em;
+}
+.svg-inline--fa.fa-lg {
+  vertical-align: -0.2em;
+}
+.svg-inline--fa.fa-xl {
+  vertical-align: -0.25em;
+}
+.svg-inline--fa.fa-2xl {
+  vertical-align: -0.3125em;
+}
+.svg-inline--fa.fa-pull-left {
+  margin-right: var(--fa-pull-margin, 0.3em);
+  width: auto;
+}
+.svg-inline--fa.fa-pull-right {
+  margin-left: var(--fa-pull-margin, 0.3em);
+  width: auto;
+}
+.svg-inline--fa.fa-li {
+  width: var(--fa-li-width, 2em);
+  top: 0.25em;
+}
+.svg-inline--fa.fa-fw {
+  width: var(--fa-fw-width, 1.25em);
+}
+
+.fa-layers svg.svg-inline--fa {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.fa-layers-counter, .fa-layers-text {
+  display: inline-block;
+  position: absolute;
+  text-align: center;
+}
+
+.fa-layers {
+  display: inline-block;
+  height: 1em;
+  position: relative;
+  text-align: center;
+  vertical-align: -0.125em;
+  width: 1em;
+}
+.fa-layers svg.svg-inline--fa {
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+.fa-layers-text {
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+.fa-layers-counter {
+  background-color: var(--fa-counter-background-color, #ff253a);
+  border-radius: var(--fa-counter-border-radius, 1em);
+  box-sizing: border-box;
+  color: var(--fa-inverse, #fff);
+  line-height: var(--fa-counter-line-height, 1);
+  max-width: var(--fa-counter-max-width, 5em);
+  min-width: var(--fa-counter-min-width, 1.5em);
+  overflow: hidden;
+  padding: var(--fa-counter-padding, 0.25em 0.5em);
+  right: var(--fa-right, 0);
+  text-overflow: ellipsis;
+  top: var(--fa-top, 0);
+  -webkit-transform: scale(var(--fa-counter-scale, 0.25));
+          transform: scale(var(--fa-counter-scale, 0.25));
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+}
+
+.fa-layers-bottom-right {
+  bottom: var(--fa-bottom, 0);
+  right: var(--fa-right, 0);
+  top: auto;
+  -webkit-transform: scale(var(--fa-layers-scale, 0.25));
+          transform: scale(var(--fa-layers-scale, 0.25));
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+}
+
+.fa-layers-bottom-left {
+  bottom: var(--fa-bottom, 0);
+  left: var(--fa-left, 0);
+  right: auto;
+  top: auto;
+  -webkit-transform: scale(var(--fa-layers-scale, 0.25));
+          transform: scale(var(--fa-layers-scale, 0.25));
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+}
+
+.fa-layers-top-right {
+  top: var(--fa-top, 0);
+  right: var(--fa-right, 0);
+  -webkit-transform: scale(var(--fa-layers-scale, 0.25));
+          transform: scale(var(--fa-layers-scale, 0.25));
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+}
+
+.fa-layers-top-left {
+  left: var(--fa-left, 0);
+  right: auto;
+  top: var(--fa-top, 0);
+  -webkit-transform: scale(var(--fa-layers-scale, 0.25));
+          transform: scale(var(--fa-layers-scale, 0.25));
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+}
+
+.fa-1x {
+  font-size: 1em;
+}
+
+.fa-2x {
+  font-size: 2em;
+}
+
+.fa-3x {
+  font-size: 3em;
+}
+
+.fa-4x {
+  font-size: 4em;
+}
+
+.fa-5x {
+  font-size: 5em;
+}
+
+.fa-6x {
+  font-size: 6em;
+}
+
+.fa-7x {
+  font-size: 7em;
+}
+
+.fa-8x {
+  font-size: 8em;
+}
+
+.fa-9x {
+  font-size: 9em;
+}
+
+.fa-10x {
+  font-size: 10em;
+}
+
+.fa-2xs {
+  font-size: 0.625em;
+  line-height: 0.1em;
+  vertical-align: 0.225em;
+}
+
+.fa-xs {
+  font-size: 0.75em;
+  line-height: 0.0833333337em;
+  vertical-align: 0.125em;
+}
+
+.fa-sm {
+  font-size: 0.875em;
+  line-height: 0.0714285718em;
+  vertical-align: 0.0535714295em;
+}
+
+.fa-lg {
+  font-size: 1.25em;
+  line-height: 0.05em;
+  vertical-align: -0.075em;
+}
+
+.fa-xl {
+  font-size: 1.5em;
+  line-height: 0.0416666682em;
+  vertical-align: -0.125em;
+}
+
+.fa-2xl {
+  font-size: 2em;
+  line-height: 0.03125em;
+  vertical-align: -0.1875em;
+}
+
+.fa-fw {
+  text-align: center;
+  width: 1.25em;
+}
+
+.fa-ul {
+  list-style-type: none;
+  margin-left: var(--fa-li-margin, 2.5em);
+  padding-left: 0;
+}
+.fa-ul > li {
+  position: relative;
+}
+
+.fa-li {
+  left: calc(var(--fa-li-width, 2em) * -1);
+  position: absolute;
+  text-align: center;
+  width: var(--fa-li-width, 2em);
+  line-height: inherit;
+}
+
+.fa-border {
+  border-color: var(--fa-border-color, #eee);
+  border-radius: var(--fa-border-radius, 0.1em);
+  border-style: var(--fa-border-style, solid);
+  border-width: var(--fa-border-width, 0.08em);
+  padding: var(--fa-border-padding, 0.2em 0.25em 0.15em);
+}
+
+.fa-pull-left {
+  float: left;
+  margin-right: var(--fa-pull-margin, 0.3em);
+}
+
+.fa-pull-right {
+  float: right;
+  margin-left: var(--fa-pull-margin, 0.3em);
+}
+
+.fa-beat {
+  -webkit-animation-name: fa-beat;
+          animation-name: fa-beat;
+  -webkit-animation-delay: var(--fa-animation-delay, 0s);
+          animation-delay: var(--fa-animation-delay, 0s);
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+          animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 1s);
+          animation-duration: var(--fa-animation-duration, 1s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+          animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, ease-in-out);
+          animation-timing-function: var(--fa-animation-timing, ease-in-out);
+}
+
+.fa-bounce {
+  -webkit-animation-name: fa-bounce;
+          animation-name: fa-bounce;
+  -webkit-animation-delay: var(--fa-animation-delay, 0s);
+          animation-delay: var(--fa-animation-delay, 0s);
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+          animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 1s);
+          animation-duration: var(--fa-animation-duration, 1s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+          animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.28, 0.84, 0.42, 1));
+          animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.28, 0.84, 0.42, 1));
+}
+
+.fa-fade {
+  -webkit-animation-name: fa-fade;
+          animation-name: fa-fade;
+  -webkit-animation-delay: var(--fa-animation-delay, 0s);
+          animation-delay: var(--fa-animation-delay, 0s);
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+          animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 1s);
+          animation-duration: var(--fa-animation-duration, 1s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+          animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+          animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+}
+
+.fa-beat-fade {
+  -webkit-animation-name: fa-beat-fade;
+          animation-name: fa-beat-fade;
+  -webkit-animation-delay: var(--fa-animation-delay, 0s);
+          animation-delay: var(--fa-animation-delay, 0s);
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+          animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 1s);
+          animation-duration: var(--fa-animation-duration, 1s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+          animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+          animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+}
+
+.fa-flip {
+  -webkit-animation-name: fa-flip;
+          animation-name: fa-flip;
+  -webkit-animation-delay: var(--fa-animation-delay, 0s);
+          animation-delay: var(--fa-animation-delay, 0s);
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+          animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 1s);
+          animation-duration: var(--fa-animation-duration, 1s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+          animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, ease-in-out);
+          animation-timing-function: var(--fa-animation-timing, ease-in-out);
+}
+
+.fa-shake {
+  -webkit-animation-name: fa-shake;
+          animation-name: fa-shake;
+  -webkit-animation-delay: var(--fa-animation-delay, 0s);
+          animation-delay: var(--fa-animation-delay, 0s);
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+          animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 1s);
+          animation-duration: var(--fa-animation-duration, 1s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+          animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, linear);
+          animation-timing-function: var(--fa-animation-timing, linear);
+}
+
+.fa-spin {
+  -webkit-animation-name: fa-spin;
+          animation-name: fa-spin;
+  -webkit-animation-delay: var(--fa-animation-delay, 0s);
+          animation-delay: var(--fa-animation-delay, 0s);
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+          animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 2s);
+          animation-duration: var(--fa-animation-duration, 2s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+          animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, linear);
+          animation-timing-function: var(--fa-animation-timing, linear);
+}
+
+.fa-spin-reverse {
+  --fa-animation-direction: reverse;
+}
+
+.fa-pulse,
+.fa-spin-pulse {
+  -webkit-animation-name: fa-spin;
+          animation-name: fa-spin;
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+          animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 1s);
+          animation-duration: var(--fa-animation-duration, 1s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+          animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, steps(8));
+          animation-timing-function: var(--fa-animation-timing, steps(8));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fa-beat,
+.fa-bounce,
+.fa-fade,
+.fa-beat-fade,
+.fa-flip,
+.fa-pulse,
+.fa-shake,
+.fa-spin,
+.fa-spin-pulse {
+    -webkit-animation-delay: -1ms;
+            animation-delay: -1ms;
+    -webkit-animation-duration: 1ms;
+            animation-duration: 1ms;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-transition-delay: 0s;
+            transition-delay: 0s;
+    -webkit-transition-duration: 0s;
+            transition-duration: 0s;
+  }
+}
+@-webkit-keyframes fa-beat {
+  0%, 90% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  45% {
+    -webkit-transform: scale(var(--fa-beat-scale, 1.25));
+            transform: scale(var(--fa-beat-scale, 1.25));
+  }
+}
+@keyframes fa-beat {
+  0%, 90% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  45% {
+    -webkit-transform: scale(var(--fa-beat-scale, 1.25));
+            transform: scale(var(--fa-beat-scale, 1.25));
+  }
+}
+@-webkit-keyframes fa-bounce {
+  0% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    -webkit-transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
+            transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
+  }
+  30% {
+    -webkit-transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
+            transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
+  }
+  50% {
+    -webkit-transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
+            transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
+  }
+  57% {
+    -webkit-transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
+            transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
+  }
+  64% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+  }
+}
+@keyframes fa-bounce {
+  0% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    -webkit-transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
+            transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
+  }
+  30% {
+    -webkit-transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
+            transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
+  }
+  50% {
+    -webkit-transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
+            transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
+  }
+  57% {
+    -webkit-transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
+            transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
+  }
+  64% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+  }
+}
+@-webkit-keyframes fa-fade {
+  50% {
+    opacity: var(--fa-fade-opacity, 0.4);
+  }
+}
+@keyframes fa-fade {
+  50% {
+    opacity: var(--fa-fade-opacity, 0.4);
+  }
+}
+@-webkit-keyframes fa-beat-fade {
+  0%, 100% {
+    opacity: var(--fa-beat-fade-opacity, 0.4);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(var(--fa-beat-fade-scale, 1.125));
+            transform: scale(var(--fa-beat-fade-scale, 1.125));
+  }
+}
+@keyframes fa-beat-fade {
+  0%, 100% {
+    opacity: var(--fa-beat-fade-opacity, 0.4);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(var(--fa-beat-fade-scale, 1.125));
+            transform: scale(var(--fa-beat-fade-scale, 1.125));
+  }
+}
+@-webkit-keyframes fa-flip {
+  50% {
+    -webkit-transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+            transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+  }
+}
+@keyframes fa-flip {
+  50% {
+    -webkit-transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+            transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+  }
+}
+@-webkit-keyframes fa-shake {
+  0% {
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+  }
+  4% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+  8%, 24% {
+    -webkit-transform: rotate(-18deg);
+            transform: rotate(-18deg);
+  }
+  12%, 28% {
+    -webkit-transform: rotate(18deg);
+            transform: rotate(18deg);
+  }
+  16% {
+    -webkit-transform: rotate(-22deg);
+            transform: rotate(-22deg);
+  }
+  20% {
+    -webkit-transform: rotate(22deg);
+            transform: rotate(22deg);
+  }
+  32% {
+    -webkit-transform: rotate(-12deg);
+            transform: rotate(-12deg);
+  }
+  36% {
+    -webkit-transform: rotate(12deg);
+            transform: rotate(12deg);
+  }
+  40%, 100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+@keyframes fa-shake {
+  0% {
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+  }
+  4% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+  8%, 24% {
+    -webkit-transform: rotate(-18deg);
+            transform: rotate(-18deg);
+  }
+  12%, 28% {
+    -webkit-transform: rotate(18deg);
+            transform: rotate(18deg);
+  }
+  16% {
+    -webkit-transform: rotate(-22deg);
+            transform: rotate(-22deg);
+  }
+  20% {
+    -webkit-transform: rotate(22deg);
+            transform: rotate(22deg);
+  }
+  32% {
+    -webkit-transform: rotate(-12deg);
+            transform: rotate(-12deg);
+  }
+  36% {
+    -webkit-transform: rotate(12deg);
+            transform: rotate(12deg);
+  }
+  40%, 100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+@-webkit-keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+.fa-rotate-90 {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.fa-rotate-180 {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.fa-rotate-270 {
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+}
+
+.fa-flip-horizontal {
+  -webkit-transform: scale(-1, 1);
+          transform: scale(-1, 1);
+}
+
+.fa-flip-vertical {
+  -webkit-transform: scale(1, -1);
+          transform: scale(1, -1);
+}
+
+.fa-flip-both,
+.fa-flip-horizontal.fa-flip-vertical {
+  -webkit-transform: scale(-1, -1);
+          transform: scale(-1, -1);
+}
+
+.fa-rotate-by {
+  -webkit-transform: rotate(var(--fa-rotate-angle, none));
+          transform: rotate(var(--fa-rotate-angle, none));
+}
+
+.fa-stack {
+  display: inline-block;
+  vertical-align: middle;
+  height: 2em;
+  position: relative;
+  width: 2.5em;
+}
+
+.fa-stack-1x,
+.fa-stack-2x {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: var(--fa-stack-z-index, auto);
+}
+
+.svg-inline--fa.fa-stack-1x {
+  height: 1em;
+  width: 1.25em;
+}
+.svg-inline--fa.fa-stack-2x {
+  height: 2em;
+  width: 2.5em;
+}
+
+.fa-inverse {
+  color: var(--fa-inverse, #fff);
+}
+
+.sr-only,
+.fa-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.sr-only-focusable:not(:focus),
+.fa-sr-only-focusable:not(:focus) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.svg-inline--fa .fa-primary {
+  fill: var(--fa-primary-color, currentColor);
+  opacity: var(--fa-primary-opacity, 1);
+}
+
+.svg-inline--fa .fa-secondary {
+  fill: var(--fa-secondary-color, currentColor);
+  opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.svg-inline--fa.fa-swap-opacity .fa-primary {
+  opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.svg-inline--fa.fa-swap-opacity .fa-secondary {
+  opacity: var(--fa-primary-opacity, 1);
+}
+
+.svg-inline--fa mask .fa-primary,
+.svg-inline--fa mask .fa-secondary {
+  fill: black;
+}
+
+.fad.fa-inverse,
+.fa-duotone.fa-inverse {
+  color: var(--fa-inverse, #fff);
+}</style><link rel="icon" href="https://qhack.ai/favicon/favicon.ico"><link rel="icon" type="image/png" sizes="32x32" href="https://qhack.ai/favicon/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="https://qhack.ai/favicon/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="https://qhack.ai/favicon/apple-touch-icon.png"><link rel="manifest" href="https://qhack.ai/favicon/site.webmanifest"><link rel="mask-icon" href="https://qhack.ai/favicon/safari-pinned-tab.svg" color="#000000"><meta name="msapplication-TileColor" content="#da532c"><meta name="theme-color" content="#ffffff"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#000000"><meta name="description" content="QHack — Quantum Computing Hackathon and Coding Challenges. The one-of-a-kind celebration of quantum computing. February 13th–28th."><meta property="og:type" content="website"><meta property="og:url" content="https://qhack.ai/"><meta property="og:title" content="QHack 2023"><meta property="og:description" content="QHack — Quantum Computing Hackathon and Coding Challenges. The one-of-a-kind celebration of quantum computing. February 13th–28th."><meta property="og:image" content="https://grader-service-content-production.s3.amazonaws.com/meta/qhack/qhack-card-image-3.png"><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://qhack.ai/"><meta property="twitter:title" content="QHack 2023"><meta property="twitter:description" content="QHack — Quantum Computing Hackathon and Coding Challenges. The one-of-a-kind celebration of quantum computing. February 13th–28th."><meta property="twitter:image" content="https://grader-service-content-production.s3.amazonaws.com/meta/qhack/qhack-card-image-3.png"><title>The Magic 5-Ball — QHack</title><script defer="defer" src="./The Magic 5-Ball — QHack_files/main.a034ba62.js.download"></script><link href="./The Magic 5-Ball — QHack_files/main.863cb07a.css" rel="stylesheet"><style type="text/css">.indiana-scroll-container {
+  overflow: auto; }
+  .indiana-scroll-container--dragging {
+    scroll-behavior: auto !important; }
+    .indiana-scroll-container--dragging > * {
+      pointer-events: none;
+      cursor: -webkit-grab;
+      cursor: grab; }
+  .indiana-scroll-container--hide-scrollbars {
+    overflow: hidden;
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+    scrollbar-width: none; }
+    .indiana-scroll-container--hide-scrollbars::-webkit-scrollbar {
+      display: none !important;
+      height: 0 !important;
+      width: 0 !important;
+      background: transparent !important;
+      -webkit-appearance: none !important; }
+  .indiana-scroll-container--native-scroll {
+    overflow: auto; }
+
+.indiana-dragging {
+  cursor: -webkit-grab;
+  cursor: grab; }
+</style><style data-react-tooltip="true">.__react_component_tooltip {
+  border-radius: 3px;
+  display: inline-block;
+  font-size: 13px;
+  left: -999em;
+  opacity: 0;
+  position: fixed;
+  pointer-events: none;
+  transition: opacity 0.3s ease-out;
+  top: -999em;
+  visibility: hidden;
+  z-index: 999;
+}
+.__react_component_tooltip.allow_hover, .__react_component_tooltip.allow_click {
+  pointer-events: auto;
+}
+.__react_component_tooltip::before, .__react_component_tooltip::after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+.__react_component_tooltip.show {
+  opacity: 0.9;
+  margin-top: 0;
+  margin-left: 0;
+  visibility: visible;
+}
+.__react_component_tooltip.place-top::before {
+  bottom: 0;
+  left: 50%;
+  margin-left: -11px;
+}
+.__react_component_tooltip.place-bottom::before {
+  top: 0;
+  left: 50%;
+  margin-left: -11px;
+}
+.__react_component_tooltip.place-left::before {
+  right: 0;
+  top: 50%;
+  margin-top: -9px;
+}
+.__react_component_tooltip.place-right::before {
+  left: 0;
+  top: 50%;
+  margin-top: -9px;
+}
+.__react_component_tooltip .multi-line {
+  display: block;
+  padding: 2px 0;
+  text-align: center;
+}</style></head><body class="vsc-initialized"><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"><div id="container"><div class="NavBar__wrapper NavBar__wrapper--fixed" style="top: calc(var(--nav-bar-height) * -1);"><div class="NavBar " data-testid=""><a class="NavBar__Logo" href="https://qhack.ai/"><img src="./The Magic 5-Ball — QHack_files/QHack_logo.55c3627bd1ac52307c0ecc361ed0c60e.svg" width="50px" alt="QHack logo"></a><div class="hidden lg:flex w-full lg:relative"><div class="TopMenu__links"><a data-testid="link-home" class="TopMenu__link " href="https://qhack.ai/"><span class="TopMenu__link-text">HOME</span></a><div class="MobileDropdown"><button class="MobileDropdown__trigger" aria-expanded="false" aria-label="open events dropdown" tabindex="0"><span class="MobileDropdown__trigger-icon "><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-right" class="svg-inline--fa fa-caret-right fa-xl " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><path fill="currentColor" d="M246.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-9.2-9.2-22.9-11.9-34.9-6.9s-19.8 16.6-19.8 29.6l0 256c0 12.9 7.8 24.6 19.8 29.6s25.7 2.2 34.9-6.9l128-128z"></path></svg></span><span class="MobileDropdown__trigger-text">EVENTS</span></button></div><div class="Dropdown "><button class="Dropdown__trigger" tabindex="0" aria-expanded="false" aria-label="open events dropdown"><span class="Dropdown__trigger-text ">EVENTS</span><span class="Dropdown__trigger-icon "></span></button></div><a data-testid="link-prizes" class="TopMenu__link " href="https://qhack.ai/prizes"><span class="TopMenu__link-text">PRIZES</span></a><a data-testid="link-dashboard-challenges" class="TopMenu__link TopMenu__link--active" href="https://qhack.ai/dashboard/rank"><span class="TopMenu__link-text">CODING CHALLENGES</span></a><a href="https://github.com/XanaduAI/QHack2023" class="TopMenu__link" target="_blank" rel="noreferrer"><span class="TopMenu__link-text">HACKATHON</span></a><a data-testid="link-job-board" class="TopMenu__link " href="https://qhack.ai/job-board"><span class="TopMenu__link-text">JOB BOARD</span></a><a data-testid="link-faq" class="TopMenu__link " href="https://qhack.ai/faq"><span class="TopMenu__link-text">FAQ</span></a><a data-testid="link-metastory" class="TopMenu__link " href="https://qhack.ai/metastory"><span class="TopMenu__link-text">CODING METASTORY</span></a></div></div><div class="flex text-primary-yellow lg:hidden w-full"><button class="Button Button-basic   inline-flex p-1 text-xl my-auto " data-testid="" type="button" aria-expanded="false" aria-label="open mobile menu"><span data-testid="button-left-icon" class="Button__left-icon mr-2"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" class="svg-inline--fa fa-bars " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"></path></svg></span></button></div><div class="flex flex-1 justify-end"><button aria-label="Sign Out" class="TopMenu__Button"><span class="TopMenu__Button__sign-out">SIGN OUT</span><span class="TopMenu__Button__name">Guy-Philippe</span></button></div></div><div class="SideMenu__wrapper"><div class="SideMenu SideMenu__left
+    " data-testid="" style="width: 250px; left: -250px;"></div></div></div><div class="Layout"><div class="hero hero-large Dashboard" style="background-size: cover; background-repeat: no-repeat; background-image: url(&quot;undefined&quot;); background-color: rgb(0, 0, 0); background-position: center center;"><div class="heroContent"><h1 class="heroContent__title ">QHack</h1><div class="heroContent__subtitle"><p>Quantum Coding Challenges</p></div></div></div><div class="NavigationCardContainer indiana-scroll-container indiana-scroll-container--hide-scrollbars"><div class="Card Card--shadow NavigationCard" data-testid=""><div class="Card__content"><div class="flex justify-around lg:pb-0 w-full min-w-max"><div class="flex justify-center mx-[7px] lg:mx-0 "><a data-testid="tab-rank" tabindex="0" class="NavigationCard__Link 
+              " href="https://qhack.ai/dashboard/rank"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star NavigationCard__Link__Icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path></svg><span class="NavigationCard__Link__Text">Rank</span></a></div><div class="flex justify-center mx-[7px] lg:mx-0 "><a data-testid="tab-team" tabindex="0" class="NavigationCard__Link 
+              " href="https://qhack.ai/dashboard/team"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="users" class="svg-inline--fa fa-users NavigationCard__Link__Icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M144 0a80 80 0 1 1 0 160A80 80 0 1 1 144 0zM512 0a80 80 0 1 1 0 160A80 80 0 1 1 512 0zM0 298.7C0 239.8 47.8 192 106.7 192h42.7c15.9 0 31 3.5 44.6 9.7c-1.3 7.2-1.9 14.7-1.9 22.3c0 38.2 16.8 72.5 43.3 96c-.2 0-.4 0-.7 0H21.3C9.6 320 0 310.4 0 298.7zM405.3 320c-.2 0-.4 0-.7 0c26.6-23.5 43.3-57.8 43.3-96c0-7.6-.7-15-1.9-22.3c13.6-6.3 28.7-9.7 44.6-9.7h42.7C592.2 192 640 239.8 640 298.7c0 11.8-9.6 21.3-21.3 21.3H405.3zM224 224a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zM128 485.3C128 411.7 187.7 352 261.3 352H378.7C452.3 352 512 411.7 512 485.3c0 14.7-11.9 26.7-26.7 26.7H154.7c-14.7 0-26.7-11.9-26.7-26.7z"></path></svg><span class="NavigationCard__Link__Text">Team</span></a></div><div class="flex justify-center mx-[7px] lg:mx-0 "><a data-testid="tab-challenges" tabindex="0" class="NavigationCard__Link NavigationCard__Link--isActive
+              " href="https://qhack.ai/dashboard/challenges"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="trophy" class="svg-inline--fa fa-trophy NavigationCard__Link__Icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M400 0H176c-26.5 0-48.1 21.8-47.1 48.2c.2 5.3 .4 10.6 .7 15.8H24C10.7 64 0 74.7 0 88c0 92.6 33.5 157 78.5 200.7c44.3 43.1 98.3 64.8 138.1 75.8c23.4 6.5 39.4 26 39.4 45.6c0 20.9-17 37.9-37.9 37.9H192c-17.7 0-32 14.3-32 32s14.3 32 32 32H384c17.7 0 32-14.3 32-32s-14.3-32-32-32H357.9C337 448 320 431 320 410.1c0-19.6 15.9-39.2 39.4-45.6c39.9-11 93.9-32.7 138.2-75.8C542.5 245 576 180.6 576 88c0-13.3-10.7-24-24-24H446.4c.3-5.2 .5-10.4 .7-15.8C448.1 21.8 426.5 0 400 0zM48.9 112h84.4c9.1 90.1 29.2 150.3 51.9 190.6c-24.9-11-50.8-26.5-73.2-48.3c-32-31.1-58-76-63-142.3zM464.1 254.3c-22.4 21.8-48.3 37.3-73.2 48.3c22.7-40.3 42.8-100.5 51.9-190.6h84.4c-5.1 66.3-31.1 111.2-63 142.3z"></path></svg><span class="NavigationCard__Link__Text">Challenges</span></a></div><div class="flex justify-center mx-[7px] lg:mx-0 "><a data-testid="tab-submissions" tabindex="0" class="NavigationCard__Link 
+              " href="https://qhack.ai/dashboard/submissions"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="circle-check" class="svg-inline--fa fa-circle-check NavigationCard__Link__Icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"></path></svg><span class="NavigationCard__Link__Text">Submissions</span></a></div><div class="flex justify-center mx-[7px] lg:mx-0 "><a data-testid="tab-support" tabindex="0" class="NavigationCard__Link 
+              " href="https://qhack.ai/dashboard/support"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="comments" class="svg-inline--fa fa-comments NavigationCard__Link__Icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M208 352c114.9 0 208-78.8 208-176S322.9 0 208 0S0 78.8 0 176c0 38.6 14.7 74.3 39.6 103.4c-3.5 9.4-8.7 17.7-14.2 24.7c-4.8 6.2-9.7 11-13.3 14.3c-1.8 1.6-3.3 2.9-4.3 3.7c-.5 .4-.9 .7-1.1 .8l-.2 .2 0 0 0 0C1 327.2-1.4 334.4 .8 340.9S9.1 352 16 352c21.8 0 43.8-5.6 62.1-12.5c9.2-3.5 17.8-7.4 25.3-11.4C134.1 343.3 169.8 352 208 352zM448 176c0 112.3-99.1 196.9-216.5 207C255.8 457.4 336.4 512 432 512c38.2 0 73.9-8.7 104.7-23.9c7.5 4 16 7.9 25.2 11.4c18.3 6.9 40.3 12.5 62.1 12.5c6.9 0 13.1-4.5 15.2-11.1c2.1-6.6-.2-13.8-5.8-17.9l0 0 0 0-.2-.2c-.2-.2-.6-.4-1.1-.8c-1-.8-2.5-2-4.3-3.7c-3.6-3.3-8.5-8.1-13.3-14.3c-5.5-7-10.7-15.4-14.2-24.7c24.9-29 39.6-64.7 39.6-103.4c0-92.8-84.9-168.9-192.6-175.5c.4 5.1 .6 10.3 .6 15.5z"></path></svg><span class="NavigationCard__Link__Text">Support</span></a></div></div></div></div></div><main class="layout-width-75"><div class="Card Card--shadow-lg Challenge false" data-testid=""><div class="Card__content"><div class="Challenge__alert__container" style="top: 16px;"><div class="alert alert-success Challenge__alert"><span data-testid="undefined-content"><p class="flex justify-between"><span class="text-base">🚀 <b>CHALLENGE COMPLETED</b></span><a class="underline" href="https://qhack.ai/dashboard/submissions?status=PASSED&amp;challenge=The%20Magic%205-Ball"><u class="font-bold cursor-pointer">View successful submissions</u></a></p></span></div></div><div class="Card Card--shadow ChallengeDescriptionCard" data-testid=""><div class="Card__content"><div class="ChallengeDescriptionCard__controls"><div><button class="Button Button-text   inline-flex flex justify-center mb-2 lg:mb-0 " data-testid="" type="button"><span data-testid="button-left-icon" class="Button__left-icon mr-2"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" class="svg-inline--fa fa-chevron-down " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M201.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 338.7 54.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"></path></svg></span><span>Jump to code</span></button></div><div><button class="Button Button-text   inline-flex flex justify-center mb-2 lg:mb-0 " data-testid="" type="button"><span data-testid="button-left-icon" class="Button__left-icon mr-2"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="minus" class="svg-inline--fa fa-minus " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 256c0 17.7-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"></path></svg></span><span>Collapse text</span></button></div></div><div class="ChallengeDescriptionCard__header"><h2>The Magic 5-Ball</h2><h2>100 points</h2></div><div class="max-h-36 overflow-x-auto transition-all duration-500 max-h-[250rem]"><div class="ChallengeDescriptionCard__markdown"><h3>Backstory</h3>
+<p>Doc Trine has been kidnapped by a freelance security analyst, Ove, and
+held in some sort of 'hyperjail'. Zenda and Reece need to figure out
+where it is and how to get there, using only the janky equipment lying
+around the office. Once they've rescued her, maybe Doc Trine will finally
+reveal the secret of timbits!</p>
+<p>At Trine's desk, they find her notebook, full of diagrams,
+calculations, and dense, messy handwriting. Leafing through
+them, Zenda and Reece discover a note helpfully explaining
+what this hyperjail is: "<em>A <span class="math math-inline"><mjx-container classname="MathJax" jax="SVG"><svg xmlns="http://www.w3.org/2000/svg" width="1.131ex" height="1.557ex" role="img" focusable="false" viewBox="0 -666 500 688" xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: -0.05ex;"><defs><path id="MJX-1-TEX-N-35" d="M164 157Q164 133 148 117T109 101H102Q148 22 224 22Q294 22 326 82Q345 115 345 210Q345 313 318 349Q292 382 260 382H254Q176 382 136 314Q132 307 129 306T114 304Q97 304 95 310Q93 314 93 485V614Q93 664 98 664Q100 666 102 666Q103 666 123 658T178 642T253 634Q324 634 389 662Q397 666 402 666Q410 666 410 648V635Q328 538 205 538Q174 538 149 544L139 546V374Q158 388 169 396T205 412T256 420Q337 420 393 355T449 201Q449 109 385 44T229 -22Q148 -22 99 32T50 154Q50 178 61 192T84 210T107 214Q132 214 148 197T164 157Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mn"><use data-c="35" xlink:href="#MJX-1-TEX-N-35"></use></g></g></g></svg></mjx-container></span>-dimensional hypercube, accessed from some
+unknown point in deep space. Should get those robots out there some
+time.</em>" Robots? They keep reading: "<em>Cell number is in the magic
+5-ball.</em>" They root around in the games room and find a dusty old magic
+5-ball, which outputs 'yes' and 'no' answers to a 5-bit input.
+Presumably (though who knows how) Trine has concealed her location in
+this oracle. They have another problem, though. The fault-tolerant
+office equipment has disappeared along with Trine, leaving only noisy
+old circuitry!</p>
+<h3>Noisy Bernstein–Vazirani</h3>
+<p>The oracle encodes the cell number <span class="math math-inline"><mjx-container classname="MathJax" jax="SVG"><svg xmlns="http://www.w3.org/2000/svg" width="10.264ex" height="2.452ex" role="img" focusable="false" viewBox="0 -833.9 4536.8 1083.9" xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: -0.566ex;"><defs><path id="MJX-2-TEX-I-1D450" d="M34 159Q34 268 120 355T306 442Q362 442 394 418T427 355Q427 326 408 306T360 285Q341 285 330 295T319 325T330 359T352 380T366 386H367Q367 388 361 392T340 400T306 404Q276 404 249 390Q228 381 206 359Q162 315 142 235T121 119Q121 73 147 50Q169 26 205 26H209Q321 26 394 111Q403 121 406 121Q410 121 419 112T429 98T420 83T391 55T346 25T282 0T202 -11Q127 -11 81 37T34 159Z"></path><path id="MJX-2-TEX-N-2208" d="M84 250Q84 372 166 450T360 539Q361 539 377 539T419 540T469 540H568Q583 532 583 520Q583 511 570 501L466 500Q355 499 329 494Q280 482 242 458T183 409T147 354T129 306T124 272V270H568Q583 262 583 250T568 230H124V228Q124 207 134 177T167 112T231 48T328 7Q355 1 466 0H570Q583 -10 583 -20Q583 -32 568 -40H471Q464 -40 446 -40T417 -41Q262 -41 172 45Q84 127 84 250Z"></path><path id="MJX-2-TEX-N-7B" d="M434 -231Q434 -244 428 -250H410Q281 -250 230 -184Q225 -177 222 -172T217 -161T213 -148T211 -133T210 -111T209 -84T209 -47T209 0Q209 21 209 53Q208 142 204 153Q203 154 203 155Q189 191 153 211T82 231Q71 231 68 234T65 250T68 266T82 269Q116 269 152 289T203 345Q208 356 208 377T209 529V579Q209 634 215 656T244 698Q270 724 324 740Q361 748 377 749Q379 749 390 749T408 750H428Q434 744 434 732Q434 719 431 716Q429 713 415 713Q362 710 332 689T296 647Q291 634 291 499V417Q291 370 288 353T271 314Q240 271 184 255L170 250L184 245Q202 239 220 230T262 196T290 137Q291 131 291 1Q291 -134 296 -147Q306 -174 339 -192T415 -213Q429 -213 431 -216Q434 -219 434 -231Z"></path><path id="MJX-2-TEX-N-30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"></path><path id="MJX-2-TEX-N-2C" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z"></path><path id="MJX-2-TEX-N-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path id="MJX-2-TEX-N-7D" d="M65 731Q65 745 68 747T88 750Q171 750 216 725T279 670Q288 649 289 635T291 501Q292 362 293 357Q306 312 345 291T417 269Q428 269 431 266T434 250T431 234T417 231Q380 231 345 210T298 157Q293 143 292 121T291 -28V-79Q291 -134 285 -156T256 -198Q202 -250 89 -250Q71 -250 68 -247T65 -230Q65 -224 65 -223T66 -218T69 -214T77 -213Q91 -213 108 -210T146 -200T183 -177T207 -139Q208 -134 209 3L210 139Q223 196 280 230Q315 247 330 250Q305 257 280 270Q225 304 212 352L210 362L209 498Q208 635 207 640Q195 680 154 696T77 713Q68 713 67 716T65 731Z"></path><path id="MJX-2-TEX-N-35" d="M164 157Q164 133 148 117T109 101H102Q148 22 224 22Q294 22 326 82Q345 115 345 210Q345 313 318 349Q292 382 260 382H254Q176 382 136 314Q132 307 129 306T114 304Q97 304 95 310Q93 314 93 485V614Q93 664 98 664Q100 666 102 666Q103 666 123 658T178 642T253 634Q324 634 389 662Q397 666 402 666Q410 666 410 648V635Q328 538 205 538Q174 538 149 544L139 546V374Q158 388 169 396T205 412T256 420Q337 420 393 355T449 201Q449 109 385 44T229 -22Q148 -22 99 32T50 154Q50 178 61 192T84 210T107 214Q132 214 148 197T164 157Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><use data-c="1D450" xlink:href="#MJX-2-TEX-I-1D450"></use></g><g data-mml-node="mo" transform="translate(710.8,0)"><use data-c="2208" xlink:href="#MJX-2-TEX-N-2208"></use></g><g data-mml-node="mo" transform="translate(1655.6,0)"><use data-c="7B" xlink:href="#MJX-2-TEX-N-7B"></use></g><g data-mml-node="mn" transform="translate(2155.6,0)"><use data-c="30" xlink:href="#MJX-2-TEX-N-30"></use></g><g data-mml-node="mo" transform="translate(2655.6,0)"><use data-c="2C" xlink:href="#MJX-2-TEX-N-2C"></use></g><g data-mml-node="mn" transform="translate(3100.2,0)"><use data-c="31" xlink:href="#MJX-2-TEX-N-31"></use></g><g data-mml-node="msup" transform="translate(3600.2,0)"><g data-mml-node="mo"><use data-c="7D" xlink:href="#MJX-2-TEX-N-7D"></use></g><g data-mml-node="mn" transform="translate(533,363) scale(0.707)"><use data-c="35" xlink:href="#MJX-2-TEX-N-35"></use></g></g></g></g></svg></mjx-container></span>, a <span class="math math-inline"><mjx-container classname="MathJax" jax="SVG"><svg xmlns="http://www.w3.org/2000/svg" width="1.131ex" height="1.557ex" role="img" focusable="false" viewBox="0 -666 500 688" xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: -0.05ex;"><defs><path id="MJX-3-TEX-N-35" d="M164 157Q164 133 148 117T109 101H102Q148 22 224 22Q294 22 326 82Q345 115 345 210Q345 313 318 349Q292 382 260 382H254Q176 382 136 314Q132 307 129 306T114 304Q97 304 95 310Q93 314 93 485V614Q93 664 98 664Q100 666 102 666Q103 666 123 658T178 642T253 634Q324 634 389 662Q397 666 402 666Q410 666 410 648V635Q328 538 205 538Q174 538 149 544L139 546V374Q158 388 169 396T205 412T256 420Q337 420 393 355T449 201Q449 109 385 44T229 -22Q148 -22 99 32T50 154Q50 178 61 192T84 210T107 214Q132 214 148 197T164 157Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mn"><use data-c="35" xlink:href="#MJX-3-TEX-N-35"></use></g></g></g></svg></mjx-container></span>-bit string.
+Consider the dot product</p>
+<div class="math math-display"><mjx-container classname="MathJax" jax="SVG" display="true"><svg xmlns="http://www.w3.org/2000/svg" width="47.743ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 21102.5 1000" xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: -0.566ex;"><defs><path id="MJX-4-TEX-I-1D453" d="M118 -162Q120 -162 124 -164T135 -167T147 -168Q160 -168 171 -155T187 -126Q197 -99 221 27T267 267T289 382V385H242Q195 385 192 387Q188 390 188 397L195 425Q197 430 203 430T250 431Q298 431 298 432Q298 434 307 482T319 540Q356 705 465 705Q502 703 526 683T550 630Q550 594 529 578T487 561Q443 561 443 603Q443 622 454 636T478 657L487 662Q471 668 457 668Q445 668 434 658T419 630Q412 601 403 552T387 469T380 433Q380 431 435 431Q480 431 487 430T498 424Q499 420 496 407T491 391Q489 386 482 386T428 385H372L349 263Q301 15 282 -47Q255 -132 212 -173Q175 -205 139 -205Q107 -205 81 -186T55 -132Q55 -95 76 -78T118 -61Q162 -61 162 -103Q162 -122 151 -136T127 -157L118 -162Z"></path><path id="MJX-4-TEX-N-28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path><path id="MJX-4-TEX-I-1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path><path id="MJX-4-TEX-N-29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path><path id="MJX-4-TEX-N-3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path><path id="MJX-4-TEX-N-22C5" d="M78 250Q78 274 95 292T138 310Q162 310 180 294T199 251Q199 226 182 208T139 190T96 207T78 250Z"></path><path id="MJX-4-TEX-I-1D450" d="M34 159Q34 268 120 355T306 442Q362 442 394 418T427 355Q427 326 408 306T360 285Q341 285 330 295T319 325T330 359T352 380T366 386H367Q367 388 361 392T340 400T306 404Q276 404 249 390Q228 381 206 359Q162 315 142 235T121 119Q121 73 147 50Q169 26 205 26H209Q321 26 394 111Q403 121 406 121Q410 121 419 112T429 98T420 83T391 55T346 25T282 0T202 -11Q127 -11 81 37T34 159Z"></path><path id="MJX-4-TEX-N-30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"></path><path id="MJX-4-TEX-N-2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path><path id="MJX-4-TEX-N-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path id="MJX-4-TEX-N-22EF" d="M78 250Q78 274 95 292T138 310Q162 310 180 294T199 251Q199 226 182 208T139 190T96 207T78 250ZM525 250Q525 274 542 292T585 310Q609 310 627 294T646 251Q646 226 629 208T586 190T543 207T525 250ZM972 250Q972 274 989 292T1032 310Q1056 310 1074 294T1093 251Q1093 226 1076 208T1033 190T990 207T972 250Z"></path><path id="MJX-4-TEX-N-35" d="M164 157Q164 133 148 117T109 101H102Q148 22 224 22Q294 22 326 82Q345 115 345 210Q345 313 318 349Q292 382 260 382H254Q176 382 136 314Q132 307 129 306T114 304Q97 304 95 310Q93 314 93 485V614Q93 664 98 664Q100 666 102 666Q103 666 123 658T178 642T253 634Q324 634 389 662Q397 666 402 666Q410 666 410 648V635Q328 538 205 538Q174 538 149 544L139 546V374Q158 388 169 396T205 412T256 420Q337 420 393 355T449 201Q449 109 385 44T229 -22Q148 -22 99 32T50 154Q50 178 61 192T84 210T107 214Q132 214 148 197T164 157Z"></path><path id="MJX-4-TEX-N-6D" d="M41 46H55Q94 46 102 60V68Q102 77 102 91T102 122T103 161T103 203Q103 234 103 269T102 328V351Q99 370 88 376T43 385H25V408Q25 431 27 431L37 432Q47 433 65 434T102 436Q119 437 138 438T167 441T178 442H181V402Q181 364 182 364T187 369T199 384T218 402T247 421T285 437Q305 442 336 442Q351 442 364 440T387 434T406 426T421 417T432 406T441 395T448 384T452 374T455 366L457 361L460 365Q463 369 466 373T475 384T488 397T503 410T523 422T546 432T572 439T603 442Q729 442 740 329Q741 322 741 190V104Q741 66 743 59T754 49Q775 46 803 46H819V0H811L788 1Q764 2 737 2T699 3Q596 3 587 0H579V46H595Q656 46 656 62Q657 64 657 200Q656 335 655 343Q649 371 635 385T611 402T585 404Q540 404 506 370Q479 343 472 315T464 232V168V108Q464 78 465 68T468 55T477 49Q498 46 526 46H542V0H534L510 1Q487 2 460 2T422 3Q319 3 310 0H302V46H318Q379 46 379 62Q380 64 380 200Q379 335 378 343Q372 371 358 385T334 402T308 404Q263 404 229 370Q202 343 195 315T187 232V168V108Q187 78 188 68T191 55T200 49Q221 46 249 46H265V0H257L234 1Q210 2 183 2T145 3Q42 3 33 0H25V46H41Z"></path><path id="MJX-4-TEX-N-6F" d="M28 214Q28 309 93 378T250 448Q340 448 405 380T471 215Q471 120 407 55T250 -10Q153 -10 91 57T28 214ZM250 30Q372 30 372 193V225V250Q372 272 371 288T364 326T348 362T317 390T268 410Q263 411 252 411Q222 411 195 399Q152 377 139 338T126 246V226Q126 130 145 91Q177 30 250 30Z"></path><path id="MJX-4-TEX-N-64" d="M376 495Q376 511 376 535T377 568Q377 613 367 624T316 637H298V660Q298 683 300 683L310 684Q320 685 339 686T376 688Q393 689 413 690T443 693T454 694H457V390Q457 84 458 81Q461 61 472 55T517 46H535V0Q533 0 459 -5T380 -11H373V44L365 37Q307 -11 235 -11Q158 -11 96 50T34 215Q34 315 97 378T244 442Q319 442 376 393V495ZM373 342Q328 405 260 405Q211 405 173 369Q146 341 139 305T131 211Q131 155 138 120T173 59Q203 26 251 26Q322 26 373 103V342Z"></path><path id="MJX-4-TEX-N-32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path><path id="MJX-4-TEX-N-2C" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><use data-c="1D453" xlink:href="#MJX-4-TEX-I-1D453"></use></g><g data-mml-node="mo" transform="translate(550,0)"><use data-c="28" xlink:href="#MJX-4-TEX-N-28"></use></g><g data-mml-node="mi" transform="translate(939,0)"><use data-c="1D465" xlink:href="#MJX-4-TEX-I-1D465"></use></g><g data-mml-node="mo" transform="translate(1511,0)"><use data-c="29" xlink:href="#MJX-4-TEX-N-29"></use></g><g data-mml-node="mo" transform="translate(2177.8,0)"><use data-c="3D" xlink:href="#MJX-4-TEX-N-3D"></use></g><g data-mml-node="mi" transform="translate(3233.6,0)"><use data-c="1D465" xlink:href="#MJX-4-TEX-I-1D465"></use></g><g data-mml-node="mo" transform="translate(4027.8,0)"><use data-c="22C5" xlink:href="#MJX-4-TEX-N-22C5"></use></g><g data-mml-node="mi" transform="translate(4528,0)"><use data-c="1D450" xlink:href="#MJX-4-TEX-I-1D450"></use></g><g data-mml-node="mo" transform="translate(5238.8,0)"><use data-c="3D" xlink:href="#MJX-4-TEX-N-3D"></use></g><g data-mml-node="msub" transform="translate(6294.6,0)"><g data-mml-node="mi"><use data-c="1D465" xlink:href="#MJX-4-TEX-I-1D465"></use></g><g data-mml-node="mn" transform="translate(605,-150) scale(0.707)"><use data-c="30" xlink:href="#MJX-4-TEX-N-30"></use></g></g><g data-mml-node="msub" transform="translate(7303.1,0)"><g data-mml-node="mi"><use data-c="1D450" xlink:href="#MJX-4-TEX-I-1D450"></use></g><g data-mml-node="mn" transform="translate(466,-150) scale(0.707)"><use data-c="30" xlink:href="#MJX-4-TEX-N-30"></use></g></g><g data-mml-node="mo" transform="translate(8394.9,0)"><use data-c="2B" xlink:href="#MJX-4-TEX-N-2B"></use></g><g data-mml-node="msub" transform="translate(9395.1,0)"><g data-mml-node="mi"><use data-c="1D465" xlink:href="#MJX-4-TEX-I-1D465"></use></g><g data-mml-node="mn" transform="translate(605,-150) scale(0.707)"><use data-c="31" xlink:href="#MJX-4-TEX-N-31"></use></g></g><g data-mml-node="msub" transform="translate(10403.7,0)"><g data-mml-node="mi"><use data-c="1D450" xlink:href="#MJX-4-TEX-I-1D450"></use></g><g data-mml-node="mn" transform="translate(466,-150) scale(0.707)"><use data-c="31" xlink:href="#MJX-4-TEX-N-31"></use></g></g><g data-mml-node="mo" transform="translate(11495.4,0)"><use data-c="2B" xlink:href="#MJX-4-TEX-N-2B"></use></g><g data-mml-node="mo" transform="translate(12495.7,0)"><use data-c="22EF" xlink:href="#MJX-4-TEX-N-22EF"></use></g><g data-mml-node="mo" transform="translate(13889.9,0)"><use data-c="2B" xlink:href="#MJX-4-TEX-N-2B"></use></g><g data-mml-node="msub" transform="translate(14890.1,0)"><g data-mml-node="mi"><use data-c="1D465" xlink:href="#MJX-4-TEX-I-1D465"></use></g><g data-mml-node="mn" transform="translate(605,-150) scale(0.707)"><use data-c="35" xlink:href="#MJX-4-TEX-N-35"></use></g></g><g data-mml-node="msub" transform="translate(15898.7,0)"><g data-mml-node="mi"><use data-c="1D450" xlink:href="#MJX-4-TEX-I-1D450"></use></g><g data-mml-node="mn" transform="translate(466,-150) scale(0.707)"><use data-c="35" xlink:href="#MJX-4-TEX-N-35"></use></g></g><g data-mml-node="mspace" transform="translate(16768.2,0)"></g><g data-mml-node="mi" transform="translate(17934.9,0)"><use data-c="6D" xlink:href="#MJX-4-TEX-N-6D"></use><use data-c="6F" xlink:href="#MJX-4-TEX-N-6F" transform="translate(833,0)"></use><use data-c="64" xlink:href="#MJX-4-TEX-N-64" transform="translate(1333,0)"></use></g><g data-mml-node="mstyle" transform="translate(19823.9,0)"><g data-mml-node="mspace"></g></g><g data-mml-node="mstyle" transform="translate(19990.9,0)"><g data-mml-node="mspace"></g></g><g data-mml-node="mn" transform="translate(20324.5,0)"><use data-c="32" xlink:href="#MJX-4-TEX-N-32"></use></g><g data-mml-node="mo" transform="translate(20824.5,0)"><use data-c="2C" xlink:href="#MJX-4-TEX-N-2C"></use></g></g></g></svg></mjx-container></div>
+<p>where <span class="math math-inline"><mjx-container classname="MathJax" jax="SVG"><svg xmlns="http://www.w3.org/2000/svg" width="10.579ex" height="2.452ex" role="img" focusable="false" viewBox="0 -833.9 4675.8 1083.9" xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: -0.566ex;"><defs><path id="MJX-5-TEX-I-1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path><path id="MJX-5-TEX-N-2208" d="M84 250Q84 372 166 450T360 539Q361 539 377 539T419 540T469 540H568Q583 532 583 520Q583 511 570 501L466 500Q355 499 329 494Q280 482 242 458T183 409T147 354T129 306T124 272V270H568Q583 262 583 250T568 230H124V228Q124 207 134 177T167 112T231 48T328 7Q355 1 466 0H570Q583 -10 583 -20Q583 -32 568 -40H471Q464 -40 446 -40T417 -41Q262 -41 172 45Q84 127 84 250Z"></path><path id="MJX-5-TEX-N-7B" d="M434 -231Q434 -244 428 -250H410Q281 -250 230 -184Q225 -177 222 -172T217 -161T213 -148T211 -133T210 -111T209 -84T209 -47T209 0Q209 21 209 53Q208 142 204 153Q203 154 203 155Q189 191 153 211T82 231Q71 231 68 234T65 250T68 266T82 269Q116 269 152 289T203 345Q208 356 208 377T209 529V579Q209 634 215 656T244 698Q270 724 324 740Q361 748 377 749Q379 749 390 749T408 750H428Q434 744 434 732Q434 719 431 716Q429 713 415 713Q362 710 332 689T296 647Q291 634 291 499V417Q291 370 288 353T271 314Q240 271 184 255L170 250L184 245Q202 239 220 230T262 196T290 137Q291 131 291 1Q291 -134 296 -147Q306 -174 339 -192T415 -213Q429 -213 431 -216Q434 -219 434 -231Z"></path><path id="MJX-5-TEX-N-30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"></path><path id="MJX-5-TEX-N-2C" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z"></path><path id="MJX-5-TEX-N-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path id="MJX-5-TEX-N-7D" d="M65 731Q65 745 68 747T88 750Q171 750 216 725T279 670Q288 649 289 635T291 501Q292 362 293 357Q306 312 345 291T417 269Q428 269 431 266T434 250T431 234T417 231Q380 231 345 210T298 157Q293 143 292 121T291 -28V-79Q291 -134 285 -156T256 -198Q202 -250 89 -250Q71 -250 68 -247T65 -230Q65 -224 65 -223T66 -218T69 -214T77 -213Q91 -213 108 -210T146 -200T183 -177T207 -139Q208 -134 209 3L210 139Q223 196 280 230Q315 247 330 250Q305 257 280 270Q225 304 212 352L210 362L209 498Q208 635 207 640Q195 680 154 696T77 713Q68 713 67 716T65 731Z"></path><path id="MJX-5-TEX-N-35" d="M164 157Q164 133 148 117T109 101H102Q148 22 224 22Q294 22 326 82Q345 115 345 210Q345 313 318 349Q292 382 260 382H254Q176 382 136 314Q132 307 129 306T114 304Q97 304 95 310Q93 314 93 485V614Q93 664 98 664Q100 666 102 666Q103 666 123 658T178 642T253 634Q324 634 389 662Q397 666 402 666Q410 666 410 648V635Q328 538 205 538Q174 538 149 544L139 546V374Q158 388 169 396T205 412T256 420Q337 420 393 355T449 201Q449 109 385 44T229 -22Q148 -22 99 32T50 154Q50 178 61 192T84 210T107 214Q132 214 148 197T164 157Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><use data-c="1D465" xlink:href="#MJX-5-TEX-I-1D465"></use></g><g data-mml-node="mo" transform="translate(849.8,0)"><use data-c="2208" xlink:href="#MJX-5-TEX-N-2208"></use></g><g data-mml-node="mo" transform="translate(1794.6,0)"><use data-c="7B" xlink:href="#MJX-5-TEX-N-7B"></use></g><g data-mml-node="mn" transform="translate(2294.6,0)"><use data-c="30" xlink:href="#MJX-5-TEX-N-30"></use></g><g data-mml-node="mo" transform="translate(2794.6,0)"><use data-c="2C" xlink:href="#MJX-5-TEX-N-2C"></use></g><g data-mml-node="mn" transform="translate(3239.2,0)"><use data-c="31" xlink:href="#MJX-5-TEX-N-31"></use></g><g data-mml-node="msup" transform="translate(3739.2,0)"><g data-mml-node="mo"><use data-c="7D" xlink:href="#MJX-5-TEX-N-7D"></use></g><g data-mml-node="mn" transform="translate(533,363) scale(0.707)"><use data-c="35" xlink:href="#MJX-5-TEX-N-35"></use></g></g></g></g></svg></mjx-container></span> is an arbitrary <span class="math math-inline"><mjx-container classname="MathJax" jax="SVG"><svg xmlns="http://www.w3.org/2000/svg" width="1.131ex" height="1.557ex" role="img" focusable="false" viewBox="0 -666 500 688" xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: -0.05ex;"><defs><path id="MJX-6-TEX-N-35" d="M164 157Q164 133 148 117T109 101H102Q148 22 224 22Q294 22 326 82Q345 115 345 210Q345 313 318 349Q292 382 260 382H254Q176 382 136 314Q132 307 129 306T114 304Q97 304 95 310Q93 314 93 485V614Q93 664 98 664Q100 666 102 666Q103 666 123 658T178 642T253 634Q324 634 389 662Q397 666 402 666Q410 666 410 648V635Q328 538 205 538Q174 538 149 544L139 546V374Q158 388 169 396T205 412T256 420Q337 420 393 355T449 201Q449 109 385 44T229 -22Q148 -22 99 32T50 154Q50 178 61 192T84 210T107 214Q132 214 148 197T164 157Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mn"><use data-c="35" xlink:href="#MJX-6-TEX-N-35"></use></g></g></g></svg></mjx-container></span>-bit string. The oracle is
+a unitary operator <span class="math math-inline"><mjx-container classname="MathJax" jax="SVG"><svg xmlns="http://www.w3.org/2000/svg" width="2.613ex" height="2.213ex" role="img" focusable="false" viewBox="0 -683 1154.9 978" xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: -0.667ex;"><defs><path id="MJX-7-TEX-I-1D448" d="M107 637Q73 637 71 641Q70 643 70 649Q70 673 81 682Q83 683 98 683Q139 681 234 681Q268 681 297 681T342 682T362 682Q378 682 378 672Q378 670 376 658Q371 641 366 638H364Q362 638 359 638T352 638T343 637T334 637Q295 636 284 634T266 623Q265 621 238 518T184 302T154 169Q152 155 152 140Q152 86 183 55T269 24Q336 24 403 69T501 205L552 406Q599 598 599 606Q599 633 535 637Q511 637 511 648Q511 650 513 660Q517 676 519 679T529 683Q532 683 561 682T645 680Q696 680 723 681T752 682Q767 682 767 672Q767 650 759 642Q756 637 737 637Q666 633 648 597Q646 592 598 404Q557 235 548 205Q515 105 433 42T263 -22Q171 -22 116 34T60 167V183Q60 201 115 421Q164 622 164 628Q164 635 107 637Z"></path><path id="MJX-7-TEX-I-1D453" d="M118 -162Q120 -162 124 -164T135 -167T147 -168Q160 -168 171 -155T187 -126Q197 -99 221 27T267 267T289 382V385H242Q195 385 192 387Q188 390 188 397L195 425Q197 430 203 430T250 431Q298 431 298 432Q298 434 307 482T319 540Q356 705 465 705Q502 703 526 683T550 630Q550 594 529 578T487 561Q443 561 443 603Q443 622 454 636T478 657L487 662Q471 668 457 668Q445 668 434 658T419 630Q412 601 403 552T387 469T380 433Q380 431 435 431Q480 431 487 430T498 424Q499 420 496 407T491 391Q489 386 482 386T428 385H372L349 263Q301 15 282 -47Q255 -132 212 -173Q175 -205 139 -205Q107 -205 81 -186T55 -132Q55 -95 76 -78T118 -61Q162 -61 162 -103Q162 -122 151 -136T127 -157L118 -162Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><use data-c="1D448" xlink:href="#MJX-7-TEX-I-1D448"></use></g><g data-mml-node="mi" transform="translate(716,-150) scale(0.707)"><use data-c="1D453" xlink:href="#MJX-7-TEX-I-1D453"></use></g></g></g></g></svg></mjx-container></span> which encodes the dot product <span class="math math-inline"><mjx-container classname="MathJax" jax="SVG"><svg xmlns="http://www.w3.org/2000/svg" width="1.244ex" height="2.059ex" role="img" focusable="false" viewBox="0 -705 550 910" xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: -0.464ex;"><defs><path id="MJX-8-TEX-I-1D453" d="M118 -162Q120 -162 124 -164T135 -167T147 -168Q160 -168 171 -155T187 -126Q197 -99 221 27T267 267T289 382V385H242Q195 385 192 387Q188 390 188 397L195 425Q197 430 203 430T250 431Q298 431 298 432Q298 434 307 482T319 540Q356 705 465 705Q502 703 526 683T550 630Q550 594 529 578T487 561Q443 561 443 603Q443 622 454 636T478 657L487 662Q471 668 457 668Q445 668 434 658T419 630Q412 601 403 552T387 469T380 433Q380 431 435 431Q480 431 487 430T498 424Q499 420 496 407T491 391Q489 386 482 386T428 385H372L349 263Q301 15 282 -47Q255 -132 212 -173Q175 -205 139 -205Q107 -205 81 -186T55 -132Q55 -95 76 -78T118 -61Q162 -61 162 -103Q162 -122 151 -136T127 -157L118 -162Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><use data-c="1D453" xlink:href="#MJX-8-TEX-I-1D453"></use></g></g></g></svg></mjx-container></span>
+as a phase:</p>
+<div class="math math-display"><mjx-container classname="MathJax" jax="SVG" display="true"><svg xmlns="http://www.w3.org/2000/svg" width="19.744ex" height="2.802ex" role="img" focusable="false" viewBox="0 -943.3 8727 1238.3" xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: -0.667ex;"><defs><path id="MJX-9-TEX-I-1D448" d="M107 637Q73 637 71 641Q70 643 70 649Q70 673 81 682Q83 683 98 683Q139 681 234 681Q268 681 297 681T342 682T362 682Q378 682 378 672Q378 670 376 658Q371 641 366 638H364Q362 638 359 638T352 638T343 637T334 637Q295 636 284 634T266 623Q265 621 238 518T184 302T154 169Q152 155 152 140Q152 86 183 55T269 24Q336 24 403 69T501 205L552 406Q599 598 599 606Q599 633 535 637Q511 637 511 648Q511 650 513 660Q517 676 519 679T529 683Q532 683 561 682T645 680Q696 680 723 681T752 682Q767 682 767 672Q767 650 759 642Q756 637 737 637Q666 633 648 597Q646 592 598 404Q557 235 548 205Q515 105 433 42T263 -22Q171 -22 116 34T60 167V183Q60 201 115 421Q164 622 164 628Q164 635 107 637Z"></path><path id="MJX-9-TEX-I-1D453" d="M118 -162Q120 -162 124 -164T135 -167T147 -168Q160 -168 171 -155T187 -126Q197 -99 221 27T267 267T289 382V385H242Q195 385 192 387Q188 390 188 397L195 425Q197 430 203 430T250 431Q298 431 298 432Q298 434 307 482T319 540Q356 705 465 705Q502 703 526 683T550 630Q550 594 529 578T487 561Q443 561 443 603Q443 622 454 636T478 657L487 662Q471 668 457 668Q445 668 434 658T419 630Q412 601 403 552T387 469T380 433Q380 431 435 431Q480 431 487 430T498 424Q499 420 496 407T491 391Q489 386 482 386T428 385H372L349 263Q301 15 282 -47Q255 -132 212 -173Q175 -205 139 -205Q107 -205 81 -186T55 -132Q55 -95 76 -78T118 -61Q162 -61 162 -103Q162 -122 151 -136T127 -157L118 -162Z"></path><path id="MJX-9-TEX-N-7C" d="M139 -249H137Q125 -249 119 -235V251L120 737Q130 750 139 750Q152 750 159 735V-235Q151 -249 141 -249H139Z"></path><path id="MJX-9-TEX-I-1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path><path id="MJX-9-TEX-N-27E9" d="M55 732Q56 739 61 744T75 750Q85 750 92 740Q95 733 186 494T278 250T187 6T92 -240Q85 -250 75 -250Q67 -250 62 -245T55 -232Q55 -227 145 11Q236 248 236 250T145 489Q55 727 55 732Z"></path><path id="MJX-9-TEX-N-3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path><path id="MJX-9-TEX-N-28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path><path id="MJX-9-TEX-N-2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path><path id="MJX-9-TEX-N-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path id="MJX-9-TEX-N-29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path><path id="MJX-9-TEX-N-2E" d="M78 60Q78 84 95 102T138 120Q162 120 180 104T199 61Q199 36 182 18T139 0T96 17T78 60Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><use data-c="1D448" xlink:href="#MJX-9-TEX-I-1D448"></use></g><g data-mml-node="mi" transform="translate(716,-150) scale(0.707)"><use data-c="1D453" xlink:href="#MJX-9-TEX-I-1D453"></use></g></g><g data-mml-node="mo" transform="translate(1154.9,0) translate(0 -0.5)"><use data-c="7C" xlink:href="#MJX-9-TEX-N-7C"></use></g><g data-mml-node="mi" transform="translate(1432.9,0)"><use data-c="1D465" xlink:href="#MJX-9-TEX-I-1D465"></use></g><g data-mml-node="mo" transform="translate(2004.9,0)"><use data-c="27E9" xlink:href="#MJX-9-TEX-N-27E9"></use></g><g data-mml-node="mo" transform="translate(2671.7,0)"><use data-c="3D" xlink:href="#MJX-9-TEX-N-3D"></use></g><g data-mml-node="mo" transform="translate(3727.5,0)"><use data-c="28" xlink:href="#MJX-9-TEX-N-28"></use></g><g data-mml-node="mo" transform="translate(4116.5,0)"><use data-c="2212" xlink:href="#MJX-9-TEX-N-2212"></use></g><g data-mml-node="mn" transform="translate(4894.5,0)"><use data-c="31" xlink:href="#MJX-9-TEX-N-31"></use></g><g data-mml-node="msup" transform="translate(5394.5,0)"><g data-mml-node="mo"><use data-c="29" xlink:href="#MJX-9-TEX-N-29"></use></g><g data-mml-node="TeXAtom" transform="translate(422,413) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mi"><use data-c="1D453" xlink:href="#MJX-9-TEX-I-1D453"></use></g><g data-mml-node="mo" transform="translate(550,0)"><use data-c="28" xlink:href="#MJX-9-TEX-N-28"></use></g><g data-mml-node="mi" transform="translate(939,0)"><use data-c="1D465" xlink:href="#MJX-9-TEX-I-1D465"></use></g><g data-mml-node="mo" transform="translate(1511,0)"><use data-c="29" xlink:href="#MJX-9-TEX-N-29"></use></g></g></g><g data-mml-node="mo" transform="translate(7210,0) translate(0 -0.5)"><use data-c="7C" xlink:href="#MJX-9-TEX-N-7C"></use></g><g data-mml-node="mi" transform="translate(7488,0)"><use data-c="1D465" xlink:href="#MJX-9-TEX-I-1D465"></use></g><g data-mml-node="mo" transform="translate(8060,0)"><use data-c="27E9" xlink:href="#MJX-9-TEX-N-27E9"></use></g><g data-mml-node="mo" transform="translate(8449,0)"><use data-c="2E" xlink:href="#MJX-9-TEX-N-2E"></use></g></g></g></svg></mjx-container></div>
+<p>Zenda and Reece need to use this oracle to learn the starting positions
+<span class="math math-inline"><mjx-container classname="MathJax" jax="SVG"><svg xmlns="http://www.w3.org/2000/svg" width="0.98ex" height="1.025ex" role="img" focusable="false" viewBox="0 -442 433 453" xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: -0.025ex;"><defs><path id="MJX-10-TEX-I-1D450" d="M34 159Q34 268 120 355T306 442Q362 442 394 418T427 355Q427 326 408 306T360 285Q341 285 330 295T319 325T330 359T352 380T366 386H367Q367 388 361 392T340 400T306 404Q276 404 249 390Q228 381 206 359Q162 315 142 235T121 119Q121 73 147 50Q169 26 205 26H209Q321 26 394 111Q403 121 406 121Q410 121 419 112T429 98T420 83T391 55T346 25T282 0T202 -11Q127 -11 81 37T34 159Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><use data-c="1D450" xlink:href="#MJX-10-TEX-I-1D450"></use></g></g></g></svg></mjx-container></span>, but equipment in the old lab is noisy, with <em>depolarizing noise</em>,
+which with some probability <span class="math math-inline"><mjx-container classname="MathJax" jax="SVG"><svg xmlns="http://www.w3.org/2000/svg" width="1.319ex" height="1.597ex" role="img" focusable="false" viewBox="0 -694 583 706" xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: -0.027ex;"><defs><path id="MJX-11-TEX-I-1D706" d="M166 673Q166 685 183 694H202Q292 691 316 644Q322 629 373 486T474 207T524 67Q531 47 537 34T546 15T551 6T555 2T556 -2T550 -11H482Q457 3 450 18T399 152L354 277L340 262Q327 246 293 207T236 141Q211 112 174 69Q123 9 111 -1T83 -12Q47 -12 47 20Q47 37 61 52T199 187Q229 216 266 252T321 306L338 322Q338 323 288 462T234 612Q214 657 183 657Q166 657 166 673Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><use data-c="1D706" xlink:href="#MJX-11-TEX-I-1D706"></use></g></g></g></svg></mjx-container></span> replaces a qubit state with
+something random.
+Despite the noise, Zenda and Reece can attempt to learn Doc Trine's
+coordinates using the <em>Bernstein–Vazirani algorithm</em>.
+We picture the noisy circuit below:</p>
+<center>
+<img src="./The Magic 5-Ball — QHack_files/bv.png" alt="Noisy Bernstein-Vazirani" width="350">
+</center>
+<p>Your goal: implement a noisy version of the Bernstein–Vazirani
+algorithm, using the noisy Hadamard gates provided.
+Will it work on the old computer?</p>
+<h2>Challenge code</h2>
+<p>In the code below, you are given various functions:</p>
+<ul>
+<li><code>oracle_matrix</code>: which encodes Doc Trine's location in the hypercube.</li>
+<li><code>noisy_Hadamard</code>: which applies a noisy Hadamard gate, with a
+probability <code>lmbda</code> of replacing an incoming or outgoing qubit
+state with something random.</li>
+<li><code>noisy_BernsteinVazirani</code>: which implements the Bernstein-Vazirani
+algorithm using the oracle and the noisy Hadamard operation <code>noisy_Hadamard</code>. <strong>You must complete this
+function</strong>.</li>
+</ul>
+<p>You may find this resource helpful:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Bernstein%E2%80%93Vazirani_algorithm" target="_blank">Bernstein-Vazirani algorithm</a></li>
+</ul>
+<h3>Inputs</h3>
+<p>The noisy Bernstein-Vazirani circuit <code>noisy_BernsteinVazirani</code> takes as input the
+probability  <code>lmbda (float)</code> of replacing the state of a qubit.</p>
+<h3>Output</h3>
+<p>Your <code>noisy_BernsteinVazirani</code> circuit should correctly output the expectation value
+of the Pauli-<span class="math math-inline"><mjx-container classname="MathJax" jax="SVG"><svg xmlns="http://www.w3.org/2000/svg" width="1.636ex" height="1.545ex" role="img" focusable="false" viewBox="0 -683 723 683" xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: 0px;"><defs><path id="MJX-12-TEX-I-1D44D" d="M58 8Q58 23 64 35Q64 36 329 334T596 635L586 637Q575 637 512 637H500H476Q442 637 420 635T365 624T311 598T266 548T228 469Q227 466 226 463T224 458T223 453T222 450L221 448Q218 443 202 443Q185 443 182 453L214 561Q228 606 241 651Q249 679 253 681Q256 683 487 683H718Q723 678 723 675Q723 673 717 649Q189 54 188 52L185 49H274Q369 50 377 51Q452 60 500 100T579 247Q587 272 590 277T603 282H607Q628 282 628 271Q547 5 541 2Q538 0 300 0H124Q58 0 58 8Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><use data-c="1D44D" xlink:href="#MJX-12-TEX-I-1D44D"></use></g></g></g></svg></mjx-container></span> operator on each qubit (<code>[float]</code>). The pattern of
+positive and negative expectations gives the cell number for any value
+of <span class="math math-inline"><mjx-container classname="MathJax" jax="SVG"><svg xmlns="http://www.w3.org/2000/svg" width="1.319ex" height="1.597ex" role="img" focusable="false" viewBox="0 -694 583 706" xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: -0.027ex;"><defs><path id="MJX-13-TEX-I-1D706" d="M166 673Q166 685 183 694H202Q292 691 316 644Q322 629 373 486T474 207T524 67Q531 47 537 34T546 15T551 6T555 2T556 -2T550 -11H482Q457 3 450 18T399 152L354 277L340 262Q327 246 293 207T236 141Q211 112 174 69Q123 9 111 -1T83 -12Q47 -12 47 20Q47 37 61 52T199 187Q229 216 266 252T321 306L338 322Q338 323 288 462T234 612Q214 657 183 657Q166 657 166 673Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><use data-c="1D706" xlink:href="#MJX-13-TEX-I-1D706"></use></g></g></g></svg></mjx-container></span>, showing that Bernstein–Vazirani is robust to noise.</p>
+<p>If your solution matches the correct one within the given tolerance
+specified in <code>check</code> (in this case it's a <code>1e-4</code> relative error
+tolerance), the output will be <code>"Correct!"</code> Otherwise, you will
+receive a <code>"Wrong answer"</code> prompt.</p><style>
+mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+  min-height: 1px;
+  min-width: 1px;
+}
+
+mjx-container[jax="SVG"] > svg a {
+  fill: blue;
+  stroke: blue;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][display="true"][width="full"] {
+  display: flex;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line], svg[data-table] > g > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame], svg[data-table] > g > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed, svg[data-table] > g > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted, svg[data-table] > g > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > g > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"] path[data-c], mjx-container[jax="SVG"] use[data-c] {
+  stroke-width: 3;
+}
+</style></div></div></div></div><div id="ChallengeSubmissionCard"><div class="Card Card--shadow lg:p-6" data-testid=""><div class="Card__content"><div class="flex justify-between"><h3>Code</h3><div><div class="flex cursor-pointer text-gray-2" data-tip="true" data-for="helpTip" tabindex="0" currentitem="false"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="circle-question" class="svg-inline--fa fa-circle-question my-auto mr-2" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM169.8 165.3c7.9-22.3 29.1-37.3 52.8-37.3h58.3c34.9 0 63.1 28.3 63.1 63.1c0 22.6-12.1 43.5-31.7 54.8L280 264.4c-.2 13-10.9 23.6-24 23.6c-13.3 0-24-10.7-24-24V250.5c0-8.6 4.6-16.5 12.1-20.8l44.3-25.4c4.7-2.7 7.6-7.7 7.6-13.1c0-8.4-6.8-15.1-15.1-15.1H222.6c-3.4 0-6.4 2.1-7.5 5.3l-.4 1.2c-4.4 12.5-18.2 19-30.6 14.6s-19-18.2-14.6-30.6l.4-1.2zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"></path></svg><span class="my-auto">Help</span></div><div class="__react_component_tooltip t24404dc0-a0bf-49ed-965b-8623fff50a2c place-top type-dark" id="helpTip" data-id="tooltip"><style aria-hidden="true">
+  	.t24404dc0-a0bf-49ed-965b-8623fff50a2c {
+	    color: #fff;
+	    background: #222;
+	    border: 1px solid transparent;
+	    border-radius: undefinedpx;
+	    padding: 8px 21px;
+  	}
+
+  	.t24404dc0-a0bf-49ed-965b-8623fff50a2c.place-top {
+        margin-top: -10px;
+    }
+    .t24404dc0-a0bf-49ed-965b-8623fff50a2c.place-top::before {
+        content: "";
+        background-color: inherit;
+        position: absolute;
+        z-index: 2;
+        width: 20px;
+        height: 12px;
+    }
+    .t24404dc0-a0bf-49ed-965b-8623fff50a2c.place-top::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-top-right-radius: undefinedpx;
+        border: 1px solid transparent;
+        background-color: #222;
+        z-index: -2;
+        bottom: -6px;
+        left: 50%;
+        margin-left: -6px;
+        transform: rotate(135deg);
+    }
+
+    .t24404dc0-a0bf-49ed-965b-8623fff50a2c.place-bottom {
+        margin-top: 10px;
+    }
+    .t24404dc0-a0bf-49ed-965b-8623fff50a2c.place-bottom::before {
+        content: "";
+        background-color: inherit;
+        position: absolute;
+        z-index: -1;
+        width: 18px;
+        height: 10px;
+    }
+    .t24404dc0-a0bf-49ed-965b-8623fff50a2c.place-bottom::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-top-right-radius: undefinedpx;
+        border: 1px solid transparent;
+        background-color: #222;
+        z-index: -2;
+        top: -6px;
+        left: 50%;
+        margin-left: -6px;
+        transform: rotate(45deg);
+    }
+
+    .t24404dc0-a0bf-49ed-965b-8623fff50a2c.place-left {
+        margin-left: -10px;
+    }
+    .t24404dc0-a0bf-49ed-965b-8623fff50a2c.place-left::before {
+        content: "";
+        background-color: inherit;
+        position: absolute;
+        z-index: -1;
+        width: 10px;
+        height: 18px;
+    }
+    .t24404dc0-a0bf-49ed-965b-8623fff50a2c.place-left::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-top-right-radius: undefinedpx;
+        border: 1px solid transparent;
+        background-color: #222;
+        z-index: -2;
+        right: -6px;
+        top: 50%;
+        margin-top: -6px;
+        transform: rotate(45deg);
+    }
+
+    .t24404dc0-a0bf-49ed-965b-8623fff50a2c.place-right {
+        margin-left: 10px;
+    }
+    .t24404dc0-a0bf-49ed-965b-8623fff50a2c.place-right::before {
+        content: "";
+        background-color: inherit;
+        position: absolute;
+        z-index: -1;
+        width: 10px;
+        height: 18px;
+    }
+    .t24404dc0-a0bf-49ed-965b-8623fff50a2c.place-right::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-top-right-radius: undefinedpx;
+        border: 1px solid transparent;
+        background-color: #222;
+        z-index: -2;
+        left: -6px;
+        top: 50%;
+        margin-top: -6px;
+        transform: rotate(-135deg);
+    }
+  </style>Read the challenge description above and begin writing your solution using the code blocks below.
+                You can only edit codeblocks that have a grey background. When you are ready, click "Submit" to check if your solution is
+                correct! Users who navigate with their keyboard or screen reader software can escape editable code blocks by pressing esc followed
+                by tab.</div></div></div><div id="codeEditor" class="w-full min-h-full mb-4"><div><div class="Accordion justify-evenly min-h-[24px] mb-4 "><button aria-label="hide code block" class="Accordion__button" data-testid="accordion-button"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" class="svg-inline--fa fa-chevron-down Accordion__icon " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M201.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 338.7 54.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"></path></svg></button><div class="Accordion__content Accordion__content--expanded"><div><div class="CodeBlock"><div class="CodeBlock__editor"><div class="cm-theme"><div class="cm-editor ͼ1 ͼ3 ͼ3w ͼ24"><div aria-live="polite" style="position: absolute; top: -10000px;"></div><div tabindex="-1" class="cm-scroller"><div class="cm-gutters" aria-hidden="true" style="min-height: 42px; position: sticky;"><div class="cm-gutter cm-lineNumbers"><div class="cm-gutterElement" style="height: 0px; visibility: hidden; pointer-events: none;">9</div><div class="cm-gutterElement" style="height: 14px;">1</div><div class="cm-gutterElement" style="height: 14px;">2</div><div class="cm-gutterElement" style="height: 14px;">3</div></div><div class="cm-gutter cm-foldGutter"><div class="cm-gutterElement" style="height: 0px; visibility: hidden; pointer-events: none;"><span title="Unfold line">›</span></div></div></div><div spellcheck="false" autocorrect="off" autocapitalize="off" translate="no" contenteditable="false" class="cm-content" style="tab-size: 4" role="textbox" aria-multiline="true" aria-readonly="true" data-language="python" aria-autocomplete="list"><div class="cm-line"><span class="ͼ25">import</span> <span class="ͼ27">json</span></div><div class="cm-line"><span class="ͼ25">import</span> <span class="ͼ27">pennylane</span> <span class="ͼ25">as</span> <span class="ͼ27">qml</span></div><div class="cm-line"><span class="ͼ25">import</span> <span class="ͼ27">pennylane</span><span class="ͼ2g">.</span><span class="ͼ27">numpy</span> <span class="ͼ25">as</span> <span class="ͼ27">np</span></div></div></div></div></div></div><div class="CodeBlock__actions"><div class="CodeBlock__action__item"><button aria-label="copy code block" data-tip="true" data-for="copyTip" data-testid="copy-block-button" class="flex text-gray-2" currentitem="false"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="copy" class="svg-inline--fa fa-copy " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M224 0c-35.3 0-64 28.7-64 64V288c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H224zM64 160c-35.3 0-64 28.7-64 64V448c0 35.3 28.7 64 64 64H288c35.3 0 64-28.7 64-64V384H288v64H64V224h64V160H64z"></path></svg></button></div></div></div><div class="lg:RoundedBorder lg:RoundedBorder__right"></div><div class="__react_component_tooltip tc926ad4a-2694-46bb-ae27-18a9f6aef462 place-top type-dark" id="copyTip" data-id="tooltip"><style aria-hidden="true">
+  	.tc926ad4a-2694-46bb-ae27-18a9f6aef462 {
+	    color: #fff;
+	    background: #222;
+	    border: 1px solid transparent;
+	    border-radius: undefinedpx;
+	    padding: 8px 21px;
+  	}
+
+  	.tc926ad4a-2694-46bb-ae27-18a9f6aef462.place-top {
+        margin-top: -10px;
+    }
+    .tc926ad4a-2694-46bb-ae27-18a9f6aef462.place-top::before {
+        content: "";
+        background-color: inherit;
+        position: absolute;
+        z-index: 2;
+        width: 20px;
+        height: 12px;
+    }
+    .tc926ad4a-2694-46bb-ae27-18a9f6aef462.place-top::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-top-right-radius: undefinedpx;
+        border: 1px solid transparent;
+        background-color: #222;
+        z-index: -2;
+        bottom: -6px;
+        left: 50%;
+        margin-left: -6px;
+        transform: rotate(135deg);
+    }
+
+    .tc926ad4a-2694-46bb-ae27-18a9f6aef462.place-bottom {
+        margin-top: 10px;
+    }
+    .tc926ad4a-2694-46bb-ae27-18a9f6aef462.place-bottom::before {
+        content: "";
+        background-color: inherit;
+        position: absolute;
+        z-index: -1;
+        width: 18px;
+        height: 10px;
+    }
+    .tc926ad4a-2694-46bb-ae27-18a9f6aef462.place-bottom::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-top-right-radius: undefinedpx;
+        border: 1px solid transparent;
+        background-color: #222;
+        z-index: -2;
+        top: -6px;
+        left: 50%;
+        margin-left: -6px;
+        transform: rotate(45deg);
+    }
+
+    .tc926ad4a-2694-46bb-ae27-18a9f6aef462.place-left {
+        margin-left: -10px;
+    }
+    .tc926ad4a-2694-46bb-ae27-18a9f6aef462.place-left::before {
+        content: "";
+        background-color: inherit;
+        position: absolute;
+        z-index: -1;
+        width: 10px;
+        height: 18px;
+    }
+    .tc926ad4a-2694-46bb-ae27-18a9f6aef462.place-left::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-top-right-radius: undefinedpx;
+        border: 1px solid transparent;
+        background-color: #222;
+        z-index: -2;
+        right: -6px;
+        top: 50%;
+        margin-top: -6px;
+        transform: rotate(45deg);
+    }
+
+    .tc926ad4a-2694-46bb-ae27-18a9f6aef462.place-right {
+        margin-left: 10px;
+    }
+    .tc926ad4a-2694-46bb-ae27-18a9f6aef462.place-right::before {
+        content: "";
+        background-color: inherit;
+        position: absolute;
+        z-index: -1;
+        width: 10px;
+        height: 18px;
+    }
+    .tc926ad4a-2694-46bb-ae27-18a9f6aef462.place-right::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-top-right-radius: undefinedpx;
+        border: 1px solid transparent;
+        background-color: #222;
+        z-index: -2;
+        left: -6px;
+        top: 50%;
+        margin-top: -6px;
+        transform: rotate(-135deg);
+    }
+  </style>Copy</div></div></div></div></div><div><div class="Accordion justify-evenly min-h-[24px] mb-4 "><button aria-label="hide code block" class="Accordion__button" data-testid="accordion-button"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" class="svg-inline--fa fa-chevron-down Accordion__icon " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M201.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 338.7 54.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"></path></svg></button><div class="Accordion__content Accordion__content--expanded"><div><div class="CodeBlock"><div class="CodeBlock__editor"><div class="cm-theme"><div class="cm-editor ͼ1 ͼ3 ͼ3y ͼ24"><div aria-live="polite" style="position: absolute; top: -10000px;"></div><div tabindex="-1" class="cm-scroller"><div class="cm-gutters" aria-hidden="true" style="min-height: 462px; position: sticky;"><div class="cm-gutter cm-lineNumbers"><div class="cm-gutterElement" style="height: 0px; visibility: hidden; pointer-events: none;">102</div><div class="cm-gutterElement" style="height: 14px;">4</div><div class="cm-gutterElement" style="height: 14px;">5</div><div class="cm-gutterElement" style="height: 14px;">6</div><div class="cm-gutterElement" style="height: 14px;">7</div><div class="cm-gutterElement" style="height: 14px;">8</div><div class="cm-gutterElement" style="height: 14px;">9</div><div class="cm-gutterElement" style="height: 14px;">10</div><div class="cm-gutterElement" style="height: 14px;">11</div><div class="cm-gutterElement" style="height: 14px;">12</div><div class="cm-gutterElement" style="height: 14px;">13</div><div class="cm-gutterElement" style="height: 14px;">14</div><div class="cm-gutterElement" style="height: 14px;">15</div><div class="cm-gutterElement" style="height: 14px;">16</div><div class="cm-gutterElement" style="height: 14px;">17</div><div class="cm-gutterElement" style="height: 14px;">18</div><div class="cm-gutterElement" style="height: 14px;">19</div><div class="cm-gutterElement" style="height: 14px;">20</div><div class="cm-gutterElement" style="height: 14px;">21</div><div class="cm-gutterElement" style="height: 14px;">22</div><div class="cm-gutterElement" style="height: 14px;">23</div><div class="cm-gutterElement" style="height: 14px;">24</div><div class="cm-gutterElement" style="height: 14px;">25</div><div class="cm-gutterElement" style="height: 14px;">26</div><div class="cm-gutterElement" style="height: 14px;">27</div><div class="cm-gutterElement" style="height: 14px;">28</div><div class="cm-gutterElement" style="height: 14px;">29</div><div class="cm-gutterElement" style="height: 14px;">30</div><div class="cm-gutterElement" style="height: 14px;">31</div><div class="cm-gutterElement" style="height: 14px;">32</div><div class="cm-gutterElement" style="height: 14px;">33</div><div class="cm-gutterElement" style="height: 14px;">34</div><div class="cm-gutterElement" style="height: 14px;">35</div><div class="cm-gutterElement" style="height: 14px;">36</div></div><div class="cm-gutter cm-foldGutter"><div class="cm-gutterElement" style="height: 0px; visibility: hidden; pointer-events: none;"><span title="Unfold line">›</span></div><div class="cm-gutterElement" style="height: 14px;"><span title="Fold line">⌄</span></div><div class="cm-gutterElement" style="height: 14px; margin-top: 210px;"><span title="Fold line">⌄</span></div><div class="cm-gutterElement" style="height: 14px; margin-top: 84px;"><span title="Fold line">⌄</span></div></div></div><div spellcheck="false" autocorrect="off" autocapitalize="off" translate="no" contenteditable="false" class="cm-content" style="tab-size: 4" role="textbox" aria-multiline="true" aria-readonly="true" data-language="python" aria-autocomplete="list"><div class="cm-line"><span class="ͼ25">def</span> <span class="ͼ28">noisy_Hadamard</span>(<span class="ͼ27">lmbda</span><span class="ͼ2b">,</span> <span class="ͼ27">wire</span>):</div><div class="cm-line">    <span class="ͼ2n">"""A Hadamard gate with depolarizing noise on either side.</span></div><div class="cm-line"><span class="ͼ2n">    </span></div><div class="cm-line"><span class="ͼ2n">    Args:</span></div><div class="cm-line"><span class="ͼ2n">        lmbda (float): The parameter defining the depolarizing channel.</span></div><div class="cm-line"><span class="ͼ2n">        wire (int): The wire the depolarizing channel acts on.</span></div><div class="cm-line"><span class="ͼ2n">    """</span></div><div class="cm-line">    <span class="ͼ27">qml</span><span class="ͼ2g">.</span><span class="ͼ26">DepolarizingChannel</span>(<span class="ͼ27">lmbda</span><span class="ͼ2b">,</span> <span class="ͼ27">wires</span><span class="ͼ2g">=</span><span class="ͼ27">wire</span>)</div><div class="cm-line">    <span class="ͼ27">qml</span><span class="ͼ2g">.</span><span class="ͼ26">Hadamard</span>(<span class="ͼ27">wire</span>)</div><div class="cm-line">    <span class="ͼ27">qml</span><span class="ͼ2g">.</span><span class="ͼ26">DepolarizingChannel</span>(<span class="ͼ27">lmbda</span><span class="ͼ2b">,</span> <span class="ͼ27">wires</span><span class="ͼ2g">=</span><span class="ͼ27">wire</span>)</div><div class="cm-line"><br></div><div class="cm-line"><span class="ͼ2r"># Oracle matrix for Doc Trine's cell number</span></div><div class="cm-line"><br></div><div class="cm-line"><span class="ͼ27">flips</span> <span class="ͼ2g">=</span> <span class="ͼ2i">[</span><span class="ͼ2e">1</span><span class="ͼ2b">,</span> <span class="ͼ2e">3</span><span class="ͼ2b">,</span> <span class="ͼ2e">5</span><span class="ͼ2b">,</span> <span class="ͼ2e">7</span><span class="ͼ2b">,</span> <span class="ͼ2e">8</span><span class="ͼ2b">,</span> <span class="ͼ2e">10</span><span class="ͼ2b">,</span> <span class="ͼ2e">12</span><span class="ͼ2b">,</span> <span class="ͼ2e">14</span><span class="ͼ2b">,</span> <span class="ͼ2e">16</span><span class="ͼ2b">,</span> <span class="ͼ2e">18</span><span class="ͼ2b">,</span> <span class="ͼ2e">20</span><span class="ͼ2b">,</span> <span class="ͼ2e">22</span><span class="ͼ2b">,</span> <span class="ͼ2e">25</span><span class="ͼ2b">,</span> <span class="ͼ2e">27</span><span class="ͼ2b">,</span> <span class="ͼ2e">29</span><span class="ͼ2b">,</span> <span class="ͼ2e">31</span><span class="ͼ2i">]</span></div><div class="cm-line"><br></div><div class="cm-line"><span class="ͼ27">oracle_matrix</span> <span class="ͼ2g">=</span> <span class="ͼ27">np</span><span class="ͼ2g">.</span><span class="ͼ26">eye</span>(<span class="ͼ2e">2</span><span class="ͼ2e">**</span><span class="ͼ2e">5</span>)</div><div class="cm-line"><span class="ͼ25">for</span> <span class="ͼ27">i</span> <span class="ͼ2g">in</span> <span class="ͼ27">flips</span>:</div><div class="cm-line">    <span class="ͼ27">oracle_matrix</span><span class="ͼ2i">[</span><span class="ͼ27">i</span><span class="ͼ2b">,</span> <span class="ͼ27">i</span><span class="ͼ2i">]</span> <span class="ͼ2g">=</span> <span class="ͼ2g">-</span><span class="ͼ2e">1</span></div><div class="cm-line"><br></div><div class="cm-line"><span class="ͼ2r"># Implement the Bernstein-Vazirani algorithm with depolarizing noise</span></div><div class="cm-line"><br></div><div class="cm-line"><span class="ͼ27">dev</span> <span class="ͼ2g">=</span> <span class="ͼ27">qml</span><span class="ͼ2g">.</span><span class="ͼ26">device</span>(<span class="ͼ2n">"default.mixed"</span><span class="ͼ2b">,</span> <span class="ͼ27">wires</span> <span class="ͼ2g">=</span> <span class="ͼ2e">5</span>)</div><div class="cm-line"><span class="ͼ2q">@</span><span class="ͼ27">qml</span><span class="ͼ2g">.</span><span class="ͼ27">qnode</span>(<span class="ͼ27">dev</span>)</div><div class="cm-line"><span class="ͼ25">def</span> <span class="ͼ28">noisy_BernsteinVazirani</span>(<span class="ͼ27">lmbda</span>):</div><div class="cm-line">    <span class="ͼ2n">"""Runs the Bernstein-Vazirani algorithm with depolarizing noise.</span></div><div class="cm-line"><br></div><div class="cm-line"><span class="ͼ2n">    Args:</span></div><div class="cm-line"><span class="ͼ2n">        lmbda (float): The probability of erasing the state of a qubit.</span></div><div class="cm-line"><br></div><div class="cm-line"><span class="ͼ2n">    Returns:</span></div><div class="cm-line"><span class="ͼ2n">        (list(float)): Expectation values for PauliZ on all n wires.</span></div><div class="cm-line"><span class="ͼ2n">    """</span></div><div class="cm-line"><br></div></div></div></div></div></div><div class="CodeBlock__actions"><div class="CodeBlock__action__item"><button aria-label="copy code block" data-tip="true" data-for="copyTip" data-testid="copy-block-button" class="flex text-gray-2" currentitem="false"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="copy" class="svg-inline--fa fa-copy " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M224 0c-35.3 0-64 28.7-64 64V288c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H224zM64 160c-35.3 0-64 28.7-64 64V448c0 35.3 28.7 64 64 64H288c35.3 0 64-28.7 64-64V384H288v64H64V224h64V160H64z"></path></svg></button></div></div></div><div class="lg:RoundedBorder lg:RoundedBorder__right"></div><div class="__react_component_tooltip t75f66459-7980-4f83-b393-f3d9b8ed0a59 place-top type-dark" id="copyTip" data-id="tooltip"><style aria-hidden="true">
+  	.t75f66459-7980-4f83-b393-f3d9b8ed0a59 {
+	    color: #fff;
+	    background: #222;
+	    border: 1px solid transparent;
+	    border-radius: undefinedpx;
+	    padding: 8px 21px;
+  	}
+
+  	.t75f66459-7980-4f83-b393-f3d9b8ed0a59.place-top {
+        margin-top: -10px;
+    }
+    .t75f66459-7980-4f83-b393-f3d9b8ed0a59.place-top::before {
+        content: "";
+        background-color: inherit;
+        position: absolute;
+        z-index: 2;
+        width: 20px;
+        height: 12px;
+    }
+    .t75f66459-7980-4f83-b393-f3d9b8ed0a59.place-top::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-top-right-radius: undefinedpx;
+        border: 1px solid transparent;
+        background-color: #222;
+        z-index: -2;
+        bottom: -6px;
+        left: 50%;
+        margin-left: -6px;
+        transform: rotate(135deg);
+    }
+
+    .t75f66459-7980-4f83-b393-f3d9b8ed0a59.place-bottom {
+        margin-top: 10px;
+    }
+    .t75f66459-7980-4f83-b393-f3d9b8ed0a59.place-bottom::before {
+        content: "";
+        background-color: inherit;
+        position: absolute;
+        z-index: -1;
+        width: 18px;
+        height: 10px;
+    }
+    .t75f66459-7980-4f83-b393-f3d9b8ed0a59.place-bottom::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-top-right-radius: undefinedpx;
+        border: 1px solid transparent;
+        background-color: #222;
+        z-index: -2;
+        top: -6px;
+        left: 50%;
+        margin-left: -6px;
+        transform: rotate(45deg);
+    }
+
+    .t75f66459-7980-4f83-b393-f3d9b8ed0a59.place-left {
+        margin-left: -10px;
+    }
+    .t75f66459-7980-4f83-b393-f3d9b8ed0a59.place-left::before {
+        content: "";
+        background-color: inherit;
+        position: absolute;
+        z-index: -1;
+        width: 10px;
+        height: 18px;
+    }
+    .t75f66459-7980-4f83-b393-f3d9b8ed0a59.place-left::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-top-right-radius: undefinedpx;
+        border: 1px solid transparent;
+        background-color: #222;
+        z-index: -2;
+        right: -6px;
+        top: 50%;
+        margin-top: -6px;
+        transform: rotate(45deg);
+    }
+
+    .t75f66459-7980-4f83-b393-f3d9b8ed0a59.place-right {
+        margin-left: 10px;
+    }
+    .t75f66459-7980-4f83-b393-f3d9b8ed0a59.place-right::before {
+        content: "";
+        background-color: inherit;
+        position: absolute;
+        z-index: -1;
+        width: 10px;
+        height: 18px;
+    }
+    .t75f66459-7980-4f83-b393-f3d9b8ed0a59.place-right::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-top-right-radius: undefinedpx;
+        border: 1px solid transparent;
+        background-color: #222;
+        z-index: -2;
+        left: -6px;
+        top: 50%;
+        margin-top: -6px;
+        transform: rotate(-135deg);
+    }
+  </style>Copy</div></div></div></div></div><div><div class="pl-6 mb-4"><div class="CodeBlock"><div class="CodeBlock__editor"><div class="cm-theme-light"><div class="cm-editor ͼ1 ͼ2 ͼ40 ͼ3z"><div aria-live="polite" style="position: absolute; top: -10000px;"></div><div tabindex="-1" class="cm-scroller"><div class="cm-gutters" aria-hidden="true" style="min-height: 28px; position: sticky;"><div class="cm-gutter cm-lineNumbers"><div class="cm-gutterElement" style="height: 0px; visibility: hidden; pointer-events: none;">45</div><div class="cm-gutterElement cm-activeLineGutter" style="height: 14px;">37</div><div class="cm-gutterElement" style="height: 14px;">38</div></div><div class="cm-gutter cm-foldGutter"><div class="cm-gutterElement" style="height: 0px; visibility: hidden; pointer-events: none;"><span title="Unfold line">›</span></div><div class="cm-gutterElement cm-activeLineGutter" style="height: 14px;"></div></div></div><div spellcheck="false" autocorrect="off" autocapitalize="off" translate="no" contenteditable="true" class="cm-content" style="tab-size: 4" role="textbox" aria-multiline="true" data-language="python" aria-autocomplete="list"><div class="cm-activeLine cm-line">    <span class="ͼm"># Put your code here #</span></div><div class="cm-line"><br></div></div></div></div></div></div><div class="CodeBlock__actions"><div class="CodeBlock__action__item"><button aria-label="copy code block" data-tip="true" data-for="copyTip" data-testid="copy-block-button" class="flex text-gray-2" currentitem="false"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="copy" class="svg-inline--fa fa-copy " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M224 0c-35.3 0-64 28.7-64 64V288c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H224zM64 160c-35.3 0-64 28.7-64 64V448c0 35.3 28.7 64 64 64H288c35.3 0 64-28.7 64-64V384H288v64H64V224h64V160H64z"></path></svg></button></div></div></div><div class=""></div><div class="__react_component_tooltip ta69231cd-cd30-448f-a510-62577310e02a place-top type-dark" id="copyTip" data-id="tooltip"><style aria-hidden="true">
+  	.ta69231cd-cd30-448f-a510-62577310e02a {
+	    color: #fff;
+	    background: #222;
+	    border: 1px solid transparent;
+	    border-radius: undefinedpx;
+	    padding: 8px 21px;
+  	}
+
+  	.ta69231cd-cd30-448f-a510-62577310e02a.place-top {
+        margin-top: -10px;
+    }
+    .ta69231cd-cd30-448f-a510-62577310e02a.place-top::before {
+        content: "";
+        background-color: inherit;
+        position: absolute;
+        z-index: 2;
+        width: 20px;
+        height: 12px;
+    }
+    .ta69231cd-cd30-448f-a510-62577310e02a.place-top::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-top-right-radius: undefinedpx;
+        border: 1px solid transparent;
+        background-color: #222;
+        z-index: -2;
+        bottom: -6px;
+        left: 50%;
+        margin-left: -6px;
+        transform: rotate(135deg);
+    }
+
+    .ta69231cd-cd30-448f-a510-62577310e02a.place-bottom {
+        margin-top: 10px;
+    }
+    .ta69231cd-cd30-448f-a510-62577310e02a.place-bottom::before {
+        content: "";
+        background-color: inherit;
+        position: absolute;
+        z-index: -1;
+        width: 18px;
+        height: 10px;
+    }
+    .ta69231cd-cd30-448f-a510-62577310e02a.place-bottom::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-top-right-radius: undefinedpx;
+        border: 1px solid transparent;
+        background-color: #222;
+        z-index: -2;
+        top: -6px;
+        left: 50%;
+        margin-left: -6px;
+        transform: rotate(45deg);
+    }
+
+    .ta69231cd-cd30-448f-a510-62577310e02a.place-left {
+        margin-left: -10px;
+    }
+    .ta69231cd-cd30-448f-a510-62577310e02a.place-left::before {
+        content: "";
+        background-color: inherit;
+        position: absolute;
+        z-index: -1;
+        width: 10px;
+        height: 18px;
+    }
+    .ta69231cd-cd30-448f-a510-62577310e02a.place-left::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-top-right-radius: undefinedpx;
+        border: 1px solid transparent;
+        background-color: #222;
+        z-index: -2;
+        right: -6px;
+        top: 50%;
+        margin-top: -6px;
+        transform: rotate(45deg);
+    }
+
+    .ta69231cd-cd30-448f-a510-62577310e02a.place-right {
+        margin-left: 10px;
+    }
+    .ta69231cd-cd30-448f-a510-62577310e02a.place-right::before {
+        content: "";
+        background-color: inherit;
+        position: absolute;
+        z-index: -1;
+        width: 10px;
+        height: 18px;
+    }
+    .ta69231cd-cd30-448f-a510-62577310e02a.place-right::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-top-right-radius: undefinedpx;
+        border: 1px solid transparent;
+        background-color: #222;
+        z-index: -2;
+        left: -6px;
+        top: 50%;
+        margin-top: -6px;
+        transform: rotate(-135deg);
+    }
+  </style>Copy</div></div></div><div><div class="Accordion justify-evenly min-h-[24px] mb-4 "><button aria-label="hide code block" class="Accordion__button" data-testid="accordion-button"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" class="svg-inline--fa fa-chevron-down Accordion__icon " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M201.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 338.7 54.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"></path></svg></button><div class="Accordion__content Accordion__content--expanded"><div><div class="CodeBlock"><div class="CodeBlock__editor"><div class="cm-theme"><div class="cm-editor ͼ1 ͼ3 ͼ42 ͼ24"><div aria-live="polite" style="position: absolute; top: -10000px;"></div><div tabindex="-1" class="cm-scroller"><div class="cm-gutters" aria-hidden="true" style="min-height: 42px; position: sticky;"><div class="cm-gutter cm-lineNumbers"><div class="cm-gutterElement" style="height: 0px; visibility: hidden; pointer-events: none;">47</div><div class="cm-gutterElement" style="height: 14px;">39</div><div class="cm-gutterElement" style="height: 14px;">40</div><div class="cm-gutterElement" style="height: 14px;">41</div></div><div class="cm-gutter cm-foldGutter"><div class="cm-gutterElement" style="height: 0px; visibility: hidden; pointer-events: none;"><span title="Unfold line">›</span></div></div></div><div spellcheck="false" autocorrect="off" autocapitalize="off" translate="no" contenteditable="false" class="cm-content" style="tab-size: 4" role="textbox" aria-multiline="true" aria-readonly="true" data-language="python" aria-autocomplete="list"><div class="cm-line">    <span class="ͼ25">return</span> <span class="ͼ2i">[</span><span class="ͼ27">qml</span><span class="ͼ2g">.</span><span class="ͼ26">expval</span>(<span class="ͼ27">qml</span><span class="ͼ2g">.</span><span class="ͼ26">PauliZ</span>(<span class="ͼ27">i</span>)) <span class="ͼ25">for</span> <span class="ͼ27">i</span> <span class="ͼ2g">in</span> <span class="ͼ28">range</span>(<span class="ͼ2e">5</span>)<span class="ͼ2i">]</span></div><div class="cm-line">        </div><div class="cm-line"><br></div></div></div></div></div></div><div class="CodeBlock__actions"><div class="CodeBlock__action__item"><button aria-label="copy code block" data-tip="true" data-for="copyTip" data-testid="copy-block-button" class="flex text-gray-2" currentitem="false"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="copy" class="svg-inline--fa fa-copy " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M224 0c-35.3 0-64 28.7-64 64V288c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H224zM64 160c-35.3 0-64 28.7-64 64V448c0 35.3 28.7 64 64 64H288c35.3 0 64-28.7 64-64V384H288v64H64V224h64V160H64z"></path></svg></button></div></div></div><div class="lg:RoundedBorder lg:RoundedBorder__right"></div><div class="__react_component_tooltip t19fde2b7-3237-4c07-a13a-a358c9494996 place-top type-dark" id="copyTip" data-id="tooltip"><style aria-hidden="true">
+  	.t19fde2b7-3237-4c07-a13a-a358c9494996 {
+	    color: #fff;
+	    background: #222;
+	    border: 1px solid transparent;
+	    border-radius: undefinedpx;
+	    padding: 8px 21px;
+  	}
+
+  	.t19fde2b7-3237-4c07-a13a-a358c9494996.place-top {
+        margin-top: -10px;
+    }
+    .t19fde2b7-3237-4c07-a13a-a358c9494996.place-top::before {
+        content: "";
+        background-color: inherit;
+        position: absolute;
+        z-index: 2;
+        width: 20px;
+        height: 12px;
+    }
+    .t19fde2b7-3237-4c07-a13a-a358c9494996.place-top::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-top-right-radius: undefinedpx;
+        border: 1px solid transparent;
+        background-color: #222;
+        z-index: -2;
+        bottom: -6px;
+        left: 50%;
+        margin-left: -6px;
+        transform: rotate(135deg);
+    }
+
+    .t19fde2b7-3237-4c07-a13a-a358c9494996.place-bottom {
+        margin-top: 10px;
+    }
+    .t19fde2b7-3237-4c07-a13a-a358c9494996.place-bottom::before {
+        content: "";
+        background-color: inherit;
+        position: absolute;
+        z-index: -1;
+        width: 18px;
+        height: 10px;
+    }
+    .t19fde2b7-3237-4c07-a13a-a358c9494996.place-bottom::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-top-right-radius: undefinedpx;
+        border: 1px solid transparent;
+        background-color: #222;
+        z-index: -2;
+        top: -6px;
+        left: 50%;
+        margin-left: -6px;
+        transform: rotate(45deg);
+    }
+
+    .t19fde2b7-3237-4c07-a13a-a358c9494996.place-left {
+        margin-left: -10px;
+    }
+    .t19fde2b7-3237-4c07-a13a-a358c9494996.place-left::before {
+        content: "";
+        background-color: inherit;
+        position: absolute;
+        z-index: -1;
+        width: 10px;
+        height: 18px;
+    }
+    .t19fde2b7-3237-4c07-a13a-a358c9494996.place-left::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-top-right-radius: undefinedpx;
+        border: 1px solid transparent;
+        background-color: #222;
+        z-index: -2;
+        right: -6px;
+        top: 50%;
+        margin-top: -6px;
+        transform: rotate(45deg);
+    }
+
+    .t19fde2b7-3237-4c07-a13a-a358c9494996.place-right {
+        margin-left: 10px;
+    }
+    .t19fde2b7-3237-4c07-a13a-a358c9494996.place-right::before {
+        content: "";
+        background-color: inherit;
+        position: absolute;
+        z-index: -1;
+        width: 10px;
+        height: 18px;
+    }
+    .t19fde2b7-3237-4c07-a13a-a358c9494996.place-right::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-top-right-radius: undefinedpx;
+        border: 1px solid transparent;
+        background-color: #222;
+        z-index: -2;
+        left: -6px;
+        top: 50%;
+        margin-top: -6px;
+        transform: rotate(-135deg);
+    }
+  </style>Copy</div></div></div></div></div><div><div class="Accordion justify-evenly min-h-[24px] mb-4 "><button aria-label="hide code block" class="Accordion__button" data-testid="accordion-button"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" class="svg-inline--fa fa-chevron-down Accordion__icon " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M201.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 338.7 54.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"></path></svg></button><div class="Accordion__content Accordion__content--expanded"><div><div class="CodeBlock"><div class="CodeBlock__editor"><div class="cm-theme"><div class="cm-editor ͼ1 ͼ3 ͼ44 ͼ24"><div aria-live="polite" style="position: absolute; top: -10000px;"></div><div tabindex="-1" class="cm-scroller"><div class="cm-gutters" aria-hidden="true" style="min-height: 224px; position: sticky;"><div class="cm-gutter cm-lineNumbers"><div class="cm-gutterElement" style="height: 0px; visibility: hidden; pointer-events: none;">140</div><div class="cm-gutterElement" style="height: 14px;">42</div><div class="cm-gutterElement" style="height: 14px;">43</div><div class="cm-gutterElement" style="height: 14px;">44</div><div class="cm-gutterElement" style="height: 14px;">45</div><div class="cm-gutterElement" style="height: 14px;">46</div><div class="cm-gutterElement" style="height: 14px;">47</div><div class="cm-gutterElement" style="height: 14px;">48</div><div class="cm-gutterElement" style="height: 14px;">49</div><div class="cm-gutterElement" style="height: 14px;">50</div><div class="cm-gutterElement" style="height: 14px;">51</div><div class="cm-gutterElement" style="height: 14px;">52</div><div class="cm-gutterElement" style="height: 14px;">53</div><div class="cm-gutterElement" style="height: 14px;">54</div><div class="cm-gutterElement" style="height: 14px;">55</div><div class="cm-gutterElement" style="height: 14px;">56</div><div class="cm-gutterElement" style="height: 14px;">57</div></div><div class="cm-gutter cm-foldGutter"><div class="cm-gutterElement" style="height: 0px; visibility: hidden; pointer-events: none;"><span title="Unfold line">›</span></div><div class="cm-gutterElement" style="height: 14px; margin-top: 14px;"><span title="Fold line">⌄</span></div><div class="cm-gutterElement" style="height: 14px; margin-top: 84px;"><span title="Fold line">⌄</span></div></div></div><div spellcheck="false" autocorrect="off" autocapitalize="off" translate="no" contenteditable="false" class="cm-content" style="tab-size: 4" role="textbox" aria-multiline="true" aria-readonly="true" data-language="python" aria-autocomplete="list"><div class="cm-line"><span class="ͼ2r"># These functions are responsible for testing the solution.</span></div><div class="cm-line"><span class="ͼ25">def</span> <span class="ͼ28">run</span>(<span class="ͼ27">test_case_input</span>: <span class="ͼ27">str</span>) -&gt; <span class="ͼ27">str</span>:</div><div class="cm-line"><br></div><div class="cm-line">    <span class="ͼ27">lmbda</span> <span class="ͼ2g">=</span> <span class="ͼ27">json</span><span class="ͼ2g">.</span><span class="ͼ26">loads</span>(<span class="ͼ27">test_case_input</span>)</div><div class="cm-line">    <span class="ͼ27">output</span> <span class="ͼ2g">=</span> <span class="ͼ28">noisy_BernsteinVazirani</span>(<span class="ͼ27">lmbda</span>)<span class="ͼ2g">.</span><span class="ͼ26">tolist</span>()</div><div class="cm-line"><br></div><div class="cm-line">    <span class="ͼ25">return</span> <span class="ͼ28">str</span>(<span class="ͼ27">output</span>)</div><div class="cm-line"><br></div><div class="cm-line"><span class="ͼ25">def</span> <span class="ͼ28">check</span>(<span class="ͼ27">solution_output</span>: <span class="ͼ27">str</span><span class="ͼ2b">,</span> <span class="ͼ27">expected_output</span>: <span class="ͼ27">str</span>) -&gt; <span class="ͼ25">None</span>:</div><div class="cm-line">    </div><div class="cm-line">    <span class="ͼ27">solution_output</span> <span class="ͼ2g">=</span> <span class="ͼ27">json</span><span class="ͼ2g">.</span><span class="ͼ26">loads</span>(<span class="ͼ27">solution_output</span>)</div><div class="cm-line">    <span class="ͼ27">expected_output</span> <span class="ͼ2g">=</span> <span class="ͼ27">json</span><span class="ͼ2g">.</span><span class="ͼ26">loads</span>(<span class="ͼ27">expected_output</span>)</div><div class="cm-line">    <span class="ͼ25">assert</span> <span class="ͼ27">np</span><span class="ͼ2g">.</span><span class="ͼ26">allclose</span>(</div><div class="cm-line">        <span class="ͼ27">solution_output</span><span class="ͼ2b">,</span> <span class="ͼ27">expected_output</span><span class="ͼ2b">,</span> <span class="ͼ27">rtol</span><span class="ͼ2g">=</span><span class="ͼ2e">1e-4</span></div><div class="cm-line">    )<span class="ͼ2b">,</span> <span class="ͼ2n">"Your noisy Bernstein-Vazirani algorithm isn't giving the right answers!"</span></div><div class="cm-line"><br></div></div></div></div></div></div><div class="CodeBlock__actions"><div class="CodeBlock__action__item"><button aria-label="copy code block" data-tip="true" data-for="copyTip" data-testid="copy-block-button" class="flex text-gray-2" currentitem="false"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="copy" class="svg-inline--fa fa-copy " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M224 0c-35.3 0-64 28.7-64 64V288c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H224zM64 160c-35.3 0-64 28.7-64 64V448c0 35.3 28.7 64 64 64H288c35.3 0 64-28.7 64-64V384H288v64H64V224h64V160H64z"></path></svg></button></div></div></div><div class="lg:RoundedBorder lg:RoundedBorder__right"></div><div class="__react_component_tooltip t3790a979-4c0b-4f6e-acd7-fa129370bb17 place-top type-dark" id="copyTip" data-id="tooltip"><style aria-hidden="true">
+  	.t3790a979-4c0b-4f6e-acd7-fa129370bb17 {
+	    color: #fff;
+	    background: #222;
+	    border: 1px solid transparent;
+	    border-radius: undefinedpx;
+	    padding: 8px 21px;
+  	}
+
+  	.t3790a979-4c0b-4f6e-acd7-fa129370bb17.place-top {
+        margin-top: -10px;
+    }
+    .t3790a979-4c0b-4f6e-acd7-fa129370bb17.place-top::before {
+        content: "";
+        background-color: inherit;
+        position: absolute;
+        z-index: 2;
+        width: 20px;
+        height: 12px;
+    }
+    .t3790a979-4c0b-4f6e-acd7-fa129370bb17.place-top::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-top-right-radius: undefinedpx;
+        border: 1px solid transparent;
+        background-color: #222;
+        z-index: -2;
+        bottom: -6px;
+        left: 50%;
+        margin-left: -6px;
+        transform: rotate(135deg);
+    }
+
+    .t3790a979-4c0b-4f6e-acd7-fa129370bb17.place-bottom {
+        margin-top: 10px;
+    }
+    .t3790a979-4c0b-4f6e-acd7-fa129370bb17.place-bottom::before {
+        content: "";
+        background-color: inherit;
+        position: absolute;
+        z-index: -1;
+        width: 18px;
+        height: 10px;
+    }
+    .t3790a979-4c0b-4f6e-acd7-fa129370bb17.place-bottom::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-top-right-radius: undefinedpx;
+        border: 1px solid transparent;
+        background-color: #222;
+        z-index: -2;
+        top: -6px;
+        left: 50%;
+        margin-left: -6px;
+        transform: rotate(45deg);
+    }
+
+    .t3790a979-4c0b-4f6e-acd7-fa129370bb17.place-left {
+        margin-left: -10px;
+    }
+    .t3790a979-4c0b-4f6e-acd7-fa129370bb17.place-left::before {
+        content: "";
+        background-color: inherit;
+        position: absolute;
+        z-index: -1;
+        width: 10px;
+        height: 18px;
+    }
+    .t3790a979-4c0b-4f6e-acd7-fa129370bb17.place-left::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-top-right-radius: undefinedpx;
+        border: 1px solid transparent;
+        background-color: #222;
+        z-index: -2;
+        right: -6px;
+        top: 50%;
+        margin-top: -6px;
+        transform: rotate(45deg);
+    }
+
+    .t3790a979-4c0b-4f6e-acd7-fa129370bb17.place-right {
+        margin-left: 10px;
+    }
+    .t3790a979-4c0b-4f6e-acd7-fa129370bb17.place-right::before {
+        content: "";
+        background-color: inherit;
+        position: absolute;
+        z-index: -1;
+        width: 10px;
+        height: 18px;
+    }
+    .t3790a979-4c0b-4f6e-acd7-fa129370bb17.place-right::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-top-right-radius: undefinedpx;
+        border: 1px solid transparent;
+        background-color: #222;
+        z-index: -2;
+        left: -6px;
+        top: 50%;
+        margin-top: -6px;
+        transform: rotate(-135deg);
+    }
+  </style>Copy</div></div></div></div></div><div><div class="Accordion justify-evenly min-h-[24px] mb-4 "><button aria-label="hide code block" class="Accordion__button" data-testid="accordion-button"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" class="svg-inline--fa fa-chevron-down Accordion__icon " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M201.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 338.7 54.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"></path></svg></button><div class="Accordion__content Accordion__content--expanded"><div><div class="CodeBlock"><div class="CodeBlock__editor"><div class="cm-theme"><div class="cm-editor ͼ1 ͼ3 ͼ46 ͼ24"><div aria-live="polite" style="position: absolute; top: -10000px;"></div><div tabindex="-1" class="cm-scroller"><div class="cm-gutters" aria-hidden="true" style="min-height: 14px; position: sticky;"><div class="cm-gutter cm-lineNumbers"><div class="cm-gutterElement" style="height: 0px; visibility: hidden; pointer-events: none;">66</div><div class="cm-gutterElement" style="height: 14px;">58</div></div><div class="cm-gutter cm-foldGutter"><div class="cm-gutterElement" style="height: 0px; visibility: hidden; pointer-events: none;"><span title="Unfold line">›</span></div></div></div><div spellcheck="false" autocorrect="off" autocapitalize="off" translate="no" contenteditable="false" class="cm-content" style="tab-size: 4" role="textbox" aria-multiline="true" aria-readonly="true" data-language="python" aria-autocomplete="list"><div class="cm-line"><span class="ͼ27">test_cases</span> <span class="ͼ2g">=</span> <span class="ͼ2i">[</span><span class="ͼ2i">[</span><span class="ͼ2n">'0.1'</span><span class="ͼ2b">,</span> <span class="ͼ2n">'[-0.5641679, -0.5641679,  0.5641679,  0.5641679, -0.5641679]'</span><span class="ͼ2i">]</span><span class="ͼ2i">]</span></div></div></div></div></div></div><div class="CodeBlock__actions"><div class="CodeBlock__action__item"><div class="flex cursor-pointer text-gray-2" data-tip="true" data-for="lockTip" aria-label="This challenge contains hidden test cases that will be used to test your solution." role="img" currentitem="false"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="lock" class="svg-inline--fa fa-lock " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" tab-index="0"><path fill="currentColor" d="M144 144v48H304V144c0-44.2-35.8-80-80-80s-80 35.8-80 80zM80 192V144C80 64.5 144.5 0 224 0s144 64.5 144 144v48h16c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V256c0-35.3 28.7-64 64-64H80z"></path></svg></div><div class="__react_component_tooltip t5c5fb443-95a7-4bd9-83c5-27aa6f4b7abe place-top type-dark" id="lockTip" data-id="tooltip"><style aria-hidden="true">
+  	.t5c5fb443-95a7-4bd9-83c5-27aa6f4b7abe {
+	    color: #fff;
+	    background: #222;
+	    border: 1px solid transparent;
+	    border-radius: undefinedpx;
+	    padding: 8px 21px;
+  	}
+
+  	.t5c5fb443-95a7-4bd9-83c5-27aa6f4b7abe.place-top {
+        margin-top: -10px;
+    }
+    .t5c5fb443-95a7-4bd9-83c5-27aa6f4b7abe.place-top::before {
+        content: "";
+        background-color: inherit;
+        position: absolute;
+        z-index: 2;
+        width: 20px;
+        height: 12px;
+    }
+    .t5c5fb443-95a7-4bd9-83c5-27aa6f4b7abe.place-top::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-top-right-radius: undefinedpx;
+        border: 1px solid transparent;
+        background-color: #222;
+        z-index: -2;
+        bottom: -6px;
+        left: 50%;
+        margin-left: -6px;
+        transform: rotate(135deg);
+    }
+
+    .t5c5fb443-95a7-4bd9-83c5-27aa6f4b7abe.place-bottom {
+        margin-top: 10px;
+    }
+    .t5c5fb443-95a7-4bd9-83c5-27aa6f4b7abe.place-bottom::before {
+        content: "";
+        background-color: inherit;
+        position: absolute;
+        z-index: -1;
+        width: 18px;
+        height: 10px;
+    }
+    .t5c5fb443-95a7-4bd9-83c5-27aa6f4b7abe.place-bottom::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-top-right-radius: undefinedpx;
+        border: 1px solid transparent;
+        background-color: #222;
+        z-index: -2;
+        top: -6px;
+        left: 50%;
+        margin-left: -6px;
+        transform: rotate(45deg);
+    }
+
+    .t5c5fb443-95a7-4bd9-83c5-27aa6f4b7abe.place-left {
+        margin-left: -10px;
+    }
+    .t5c5fb443-95a7-4bd9-83c5-27aa6f4b7abe.place-left::before {
+        content: "";
+        background-color: inherit;
+        position: absolute;
+        z-index: -1;
+        width: 10px;
+        height: 18px;
+    }
+    .t5c5fb443-95a7-4bd9-83c5-27aa6f4b7abe.place-left::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-top-right-radius: undefinedpx;
+        border: 1px solid transparent;
+        background-color: #222;
+        z-index: -2;
+        right: -6px;
+        top: 50%;
+        margin-top: -6px;
+        transform: rotate(45deg);
+    }
+
+    .t5c5fb443-95a7-4bd9-83c5-27aa6f4b7abe.place-right {
+        margin-left: 10px;
+    }
+    .t5c5fb443-95a7-4bd9-83c5-27aa6f4b7abe.place-right::before {
+        content: "";
+        background-color: inherit;
+        position: absolute;
+        z-index: -1;
+        width: 10px;
+        height: 18px;
+    }
+    .t5c5fb443-95a7-4bd9-83c5-27aa6f4b7abe.place-right::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-top-right-radius: undefinedpx;
+        border: 1px solid transparent;
+        background-color: #222;
+        z-index: -2;
+        left: -6px;
+        top: 50%;
+        margin-top: -6px;
+        transform: rotate(-135deg);
+    }
+  </style>This challenge contains <br>hidden test cases that will<br> be used to test your solution.</div></div><div class="CodeBlock__action__item"><button aria-label="copy code block" data-tip="true" data-for="copyTip" data-testid="copy-block-button" class="flex text-gray-2" currentitem="false"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="copy" class="svg-inline--fa fa-copy " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M224 0c-35.3 0-64 28.7-64 64V288c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H224zM64 160c-35.3 0-64 28.7-64 64V448c0 35.3 28.7 64 64 64H288c35.3 0 64-28.7 64-64V384H288v64H64V224h64V160H64z"></path></svg></button></div></div></div><div class="lg:RoundedBorder lg:RoundedBorder__right"></div><div class="__react_component_tooltip t06bc0697-810f-4263-a463-a41870c04b73 place-top type-dark" id="copyTip" data-id="tooltip"><style aria-hidden="true">
+  	.t06bc0697-810f-4263-a463-a41870c04b73 {
+	    color: #fff;
+	    background: #222;
+	    border: 1px solid transparent;
+	    border-radius: undefinedpx;
+	    padding: 8px 21px;
+  	}
+
+  	.t06bc0697-810f-4263-a463-a41870c04b73.place-top {
+        margin-top: -10px;
+    }
+    .t06bc0697-810f-4263-a463-a41870c04b73.place-top::before {
+        content: "";
+        background-color: inherit;
+        position: absolute;
+        z-index: 2;
+        width: 20px;
+        height: 12px;
+    }
+    .t06bc0697-810f-4263-a463-a41870c04b73.place-top::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-top-right-radius: undefinedpx;
+        border: 1px solid transparent;
+        background-color: #222;
+        z-index: -2;
+        bottom: -6px;
+        left: 50%;
+        margin-left: -6px;
+        transform: rotate(135deg);
+    }
+
+    .t06bc0697-810f-4263-a463-a41870c04b73.place-bottom {
+        margin-top: 10px;
+    }
+    .t06bc0697-810f-4263-a463-a41870c04b73.place-bottom::before {
+        content: "";
+        background-color: inherit;
+        position: absolute;
+        z-index: -1;
+        width: 18px;
+        height: 10px;
+    }
+    .t06bc0697-810f-4263-a463-a41870c04b73.place-bottom::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-top-right-radius: undefinedpx;
+        border: 1px solid transparent;
+        background-color: #222;
+        z-index: -2;
+        top: -6px;
+        left: 50%;
+        margin-left: -6px;
+        transform: rotate(45deg);
+    }
+
+    .t06bc0697-810f-4263-a463-a41870c04b73.place-left {
+        margin-left: -10px;
+    }
+    .t06bc0697-810f-4263-a463-a41870c04b73.place-left::before {
+        content: "";
+        background-color: inherit;
+        position: absolute;
+        z-index: -1;
+        width: 10px;
+        height: 18px;
+    }
+    .t06bc0697-810f-4263-a463-a41870c04b73.place-left::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-top-right-radius: undefinedpx;
+        border: 1px solid transparent;
+        background-color: #222;
+        z-index: -2;
+        right: -6px;
+        top: 50%;
+        margin-top: -6px;
+        transform: rotate(45deg);
+    }
+
+    .t06bc0697-810f-4263-a463-a41870c04b73.place-right {
+        margin-left: 10px;
+    }
+    .t06bc0697-810f-4263-a463-a41870c04b73.place-right::before {
+        content: "";
+        background-color: inherit;
+        position: absolute;
+        z-index: -1;
+        width: 10px;
+        height: 18px;
+    }
+    .t06bc0697-810f-4263-a463-a41870c04b73.place-right::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-top-right-radius: undefinedpx;
+        border: 1px solid transparent;
+        background-color: #222;
+        z-index: -2;
+        left: -6px;
+        top: 50%;
+        margin-top: -6px;
+        transform: rotate(-135deg);
+    }
+  </style>Copy</div></div></div></div></div><div><div class="Accordion justify-evenly min-h-[24px] mb-4 "><button aria-label="hide code block" class="Accordion__button" data-testid="accordion-button"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" class="svg-inline--fa fa-chevron-down Accordion__icon " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M201.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 338.7 54.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"></path></svg></button><div class="Accordion__content Accordion__content--expanded"><div><div class="CodeBlock"><div class="CodeBlock__editor"><div class="cm-theme"><div class="cm-editor ͼ1 ͼ3 ͼ48 ͼ24"><div aria-live="polite" style="position: absolute; top: -10000px;"></div><div tabindex="-1" class="cm-scroller"><div class="cm-gutters" aria-hidden="true" style="min-height: 210px; position: sticky;"><div class="cm-gutter cm-lineNumbers"><div class="cm-gutterElement" style="height: 0px; visibility: hidden; pointer-events: none;">157</div><div class="cm-gutterElement" style="height: 14px;">59</div><div class="cm-gutterElement" style="height: 14px;">60</div><div class="cm-gutterElement" style="height: 14px;">61</div><div class="cm-gutterElement" style="height: 14px;">62</div><div class="cm-gutterElement" style="height: 14px;">63</div><div class="cm-gutterElement" style="height: 14px;">64</div><div class="cm-gutterElement" style="height: 14px;">65</div><div class="cm-gutterElement" style="height: 14px;">66</div><div class="cm-gutterElement" style="height: 14px;">67</div><div class="cm-gutterElement" style="height: 14px;">68</div><div class="cm-gutterElement" style="height: 14px;">69</div><div class="cm-gutterElement" style="height: 14px;">70</div><div class="cm-gutterElement" style="height: 14px;">71</div><div class="cm-gutterElement" style="height: 14px;">72</div><div class="cm-gutterElement" style="height: 14px;">73</div></div><div class="cm-gutter cm-foldGutter"><div class="cm-gutterElement" style="height: 0px; visibility: hidden; pointer-events: none;"><span title="Unfold line">›</span></div><div class="cm-gutterElement" style="height: 14px;"><span title="Fold line">⌄</span></div><div class="cm-gutterElement" style="height: 14px; margin-top: 28px;"><span title="Fold line">⌄</span></div><div class="cm-gutterElement" style="height: 14px; margin-top: 28px;"><span title="Fold line">⌄</span></div><div class="cm-gutterElement" style="height: 14px; margin-top: 28px;"><span title="Fold line">⌄</span></div><div class="cm-gutterElement" style="height: 14px;"><span title="Fold line">⌄</span></div><div class="cm-gutterElement" style="height: 14px; margin-top: 28px;"><span title="Fold line">⌄</span></div></div></div><div spellcheck="false" autocorrect="off" autocapitalize="off" translate="no" contenteditable="false" class="cm-content" style="tab-size: 4" role="textbox" aria-multiline="true" aria-readonly="true" data-language="python" aria-autocomplete="list"><div class="cm-line"><span class="ͼ25">for</span> <span class="ͼ27">i</span><span class="ͼ2b">,</span> (<span class="ͼ27">input_</span><span class="ͼ2b">,</span> <span class="ͼ27">expected_output</span>) <span class="ͼ2g">in</span> <span class="ͼ28">enumerate</span>(<span class="ͼ27">test_cases</span>):</div><div class="cm-line">    <span class="ͼ28">print</span>(<span class="ͼ2p">f"Running test case </span><span class="ͼ2c">{</span><span class="ͼ27">i</span><span class="ͼ2c">}</span><span class="ͼ2p"> with input '</span><span class="ͼ2c">{</span><span class="ͼ27">input_</span><span class="ͼ2c">}</span><span class="ͼ2p">'..."</span>)</div><div class="cm-line"><br></div><div class="cm-line">    <span class="ͼ25">try</span>:</div><div class="cm-line">        <span class="ͼ27">output</span> <span class="ͼ2g">=</span> <span class="ͼ28">run</span>(<span class="ͼ27">input_</span>)</div><div class="cm-line"><br></div><div class="cm-line">    <span class="ͼ25">except</span> <span class="ͼ27">Exception</span> <span class="ͼ25">as</span> <span class="ͼ27">exc</span>:</div><div class="cm-line">        <span class="ͼ28">print</span>(<span class="ͼ2p">f"Runtime Error. </span><span class="ͼ2c">{</span><span class="ͼ27">exc</span><span class="ͼ2c">}</span><span class="ͼ2p">"</span>)</div><div class="cm-line"><br></div><div class="cm-line">    <span class="ͼ25">else</span>:</div><div class="cm-line">        <span class="ͼ25">if</span> <span class="ͼ27">message</span> <span class="ͼ2g">:=</span> <span class="ͼ28">check</span>(<span class="ͼ27">output</span><span class="ͼ2b">,</span> <span class="ͼ27">expected_output</span>):</div><div class="cm-line">            <span class="ͼ28">print</span>(<span class="ͼ2p">f"Wrong Answer. Have: '</span><span class="ͼ2c">{</span><span class="ͼ27">output</span><span class="ͼ2c">}</span><span class="ͼ2p">'. Want: '</span><span class="ͼ2c">{</span><span class="ͼ27">expected_output</span><span class="ͼ2c">}</span><span class="ͼ2p">'."</span>)</div><div class="cm-line"><br></div><div class="cm-line">        <span class="ͼ25">else</span>:</div><div class="cm-line">            <span class="ͼ28">print</span>(<span class="ͼ2n">"Correct!"</span>)</div></div></div></div></div></div><div class="CodeBlock__actions"><div class="CodeBlock__action__item"><button aria-label="copy code block" data-tip="true" data-for="copyTip" data-testid="copy-block-button" class="flex text-gray-2" currentitem="false"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="copy" class="svg-inline--fa fa-copy " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M224 0c-35.3 0-64 28.7-64 64V288c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H224zM64 160c-35.3 0-64 28.7-64 64V448c0 35.3 28.7 64 64 64H288c35.3 0 64-28.7 64-64V384H288v64H64V224h64V160H64z"></path></svg></button></div></div></div><div class="lg:RoundedBorder lg:RoundedBorder__right"></div><div class="__react_component_tooltip t63f6d5c6-be02-4516-8a86-aa462d4be64a place-top type-dark" id="copyTip" data-id="tooltip"><style aria-hidden="true">
+  	.t63f6d5c6-be02-4516-8a86-aa462d4be64a {
+	    color: #fff;
+	    background: #222;
+	    border: 1px solid transparent;
+	    border-radius: undefinedpx;
+	    padding: 8px 21px;
+  	}
+
+  	.t63f6d5c6-be02-4516-8a86-aa462d4be64a.place-top {
+        margin-top: -10px;
+    }
+    .t63f6d5c6-be02-4516-8a86-aa462d4be64a.place-top::before {
+        content: "";
+        background-color: inherit;
+        position: absolute;
+        z-index: 2;
+        width: 20px;
+        height: 12px;
+    }
+    .t63f6d5c6-be02-4516-8a86-aa462d4be64a.place-top::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-top-right-radius: undefinedpx;
+        border: 1px solid transparent;
+        background-color: #222;
+        z-index: -2;
+        bottom: -6px;
+        left: 50%;
+        margin-left: -6px;
+        transform: rotate(135deg);
+    }
+
+    .t63f6d5c6-be02-4516-8a86-aa462d4be64a.place-bottom {
+        margin-top: 10px;
+    }
+    .t63f6d5c6-be02-4516-8a86-aa462d4be64a.place-bottom::before {
+        content: "";
+        background-color: inherit;
+        position: absolute;
+        z-index: -1;
+        width: 18px;
+        height: 10px;
+    }
+    .t63f6d5c6-be02-4516-8a86-aa462d4be64a.place-bottom::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-top-right-radius: undefinedpx;
+        border: 1px solid transparent;
+        background-color: #222;
+        z-index: -2;
+        top: -6px;
+        left: 50%;
+        margin-left: -6px;
+        transform: rotate(45deg);
+    }
+
+    .t63f6d5c6-be02-4516-8a86-aa462d4be64a.place-left {
+        margin-left: -10px;
+    }
+    .t63f6d5c6-be02-4516-8a86-aa462d4be64a.place-left::before {
+        content: "";
+        background-color: inherit;
+        position: absolute;
+        z-index: -1;
+        width: 10px;
+        height: 18px;
+    }
+    .t63f6d5c6-be02-4516-8a86-aa462d4be64a.place-left::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-top-right-radius: undefinedpx;
+        border: 1px solid transparent;
+        background-color: #222;
+        z-index: -2;
+        right: -6px;
+        top: 50%;
+        margin-top: -6px;
+        transform: rotate(45deg);
+    }
+
+    .t63f6d5c6-be02-4516-8a86-aa462d4be64a.place-right {
+        margin-left: 10px;
+    }
+    .t63f6d5c6-be02-4516-8a86-aa462d4be64a.place-right::before {
+        content: "";
+        background-color: inherit;
+        position: absolute;
+        z-index: -1;
+        width: 10px;
+        height: 18px;
+    }
+    .t63f6d5c6-be02-4516-8a86-aa462d4be64a.place-right::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-top-right-radius: undefinedpx;
+        border: 1px solid transparent;
+        background-color: #222;
+        z-index: -2;
+        left: -6px;
+        top: 50%;
+        margin-top: -6px;
+        transform: rotate(-135deg);
+    }
+  </style>Copy</div></div></div></div></div></div><div class="flex flex-col lg:flex-row justify-between"><div class="flex mb-6 justify-center lg:justify-start lg:mb-0"><div class="flex cursor-pointer text-gray-2"><button aria-label="copy all code blocks"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="copy" class="svg-inline--fa fa-copy my-auto mr-2" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M224 0c-35.3 0-64 28.7-64 64V288c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H224zM64 160c-35.3 0-64 28.7-64 64V448c0 35.3 28.7 64 64 64H288c35.3 0 64-28.7 64-64V384H288v64H64V224h64V160H64z"></path></svg><span class="my-auto">Copy all</span></button></div></div><div class="flex justify-end"><div class="flex flex-wrap flex-col-reverse md:flex-row"><div class="flex justify-end"><button class="Button Button-secondary   inline-flex flex justify-center mr-0 md:mr-4 " data-testid="" type="button"><span>Reset</span></button></div><a class="Button Button-secondary flex justify-center mb-2 mr-0 md:mr-4 md:mb-0 rounded-5px items-center py-2.875 px-4" href="https://pennylane.xanadu.ai/" target="_blank" rel="noreferrer"><span class="mr-2">Open Notebook</span><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-up-right-from-square" class="svg-inline--fa fa-arrow-up-right-from-square " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"></path></svg></a><div class="flex justify-end"><div><div class="mb-2 md:mb-0 ButtonGroup" data-testid=""><button class="Button Button-primary   inline-flex  " data-testid="" type="button"><span>Submit</span></button><button class="Button Button-primary   inline-flex  " data-testid="" type="button" aria-label="Submission options"><span data-testid="button-icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-down" class="svg-inline--fa fa-caret-down " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"></path></svg></span></button></div></div></div></div></div></div></div></div></div></div></div></main></div><div class="Toastify"></div><div class="Banner AppBanner" data-testid="message-banner"><div class="mx-6 max-w-7xl"><div class="AppBanner__markdown"><p>The Coding Challenge Competition is now closed, but you are welcome to continue working on the challenges until QHack ends on Feb 28 @5pm ET.</p></div></div><button class="Button Button-basic   inline-flex Banner__button " data-testid="close-banner" type="button" aria-label="close banner"><span data-testid="button-icon">×</span></button></div></div></div><script async="" src="./The Magic 5-Ball — QHack_files/js"></script></body></html>
